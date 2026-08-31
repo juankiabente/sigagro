@@ -3,7 +3,6 @@
 **Sistema de Información Geográfica Agropecuaria**
 
 Proyecto de la materia Paradigmas y Lenguajes de Programación III.
-Desarrollado por el grupo **Nipintucu**.
 
 ## Integrantes
 - Juan Carlos Abente (@juankiabente)
