@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIGAgro — P-08 Frente Ruta</title>
+  <link rel="icon" href="img/logo.jpeg"
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/paginas.css">
+</head>
+
+<body class="pagina">
+  <a class="saltar-contenido" href="#contenido">Ir al contenido</a>
+
+  <header class="barra">
+
+    <a class="barra__marca" href="index.html" aria-label="SIGAgro, inicio">
+      <img class="barra__isotipo" src="img/logo.jpeg" alt="SIGAgro">
+        <circle cx="20" cy="20" r="19" fill="#8fbc5a" stroke="#2d5016" stroke-width="2"/>
+        <path d="M8 29 L14 15 L18 23 L22 17 L27 29 Z" fill="#1b3209"/>
+        <rect x="8" y="29" width="24" height="3" fill="#2d5016"/>
+      </svg>
+    </a>
+
+    <nav class="barra__menu" aria-label="Secciones del sistema">
+
+      <a class="barra__link barra__link--activo" href="listado_tabla.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/>
+          <circle cx="12" cy="10" r="2.5"/>
+        </svg>
+        <span>Parcelas</span>
+      </a>
+
+      <a class="barra__link" href="index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/>
+          <path d="M9 3v15M15 6v15"/>
+        </svg>
+        <span>Mapa</span>
+      </a>
+
+      <a class="barra__link" href="comprar.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M14 2v6h6"/>
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <path d="M9 15h6M9 11h3"/>
+        </svg>
+        <span>Solicitar análisis</span>
+      </a>
+
+      <div class="desplegable">
+        <a class="barra__link" href="#" aria-haspopup="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M20 12a8 8 0 0 0-.2-1.7l2-1.6-2-3.4-2.4 1a8 8 0 0 0-3-1.7L14 2h-4l-.4 2.6a8 8 0 0 0-3 1.7l-2.4-1-2 3.4 2 1.6a8 8 0 0 0 0 3.4l-2 1.6 2 3.4 2.4-1a8 8 0 0 0 3 1.7L10 22h4l.4-2.6a8 8 0 0 0 3-1.7l2.4 1 2-3.4-2-1.6c.1-.6.2-1.1.2-1.7z"/>
+          </svg>
+          <span>Admin</span>
+          <svg class="desplegable__flecha" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true">
+            <path d="M1 3l4 4 4-4z"/>
+          </svg>
+        </a>
+        <div class="desplegable__lista">
+          <a href="#">Establecimientos</a>
+          <a href="#">Catálogo de cultivos</a>
+          <a href="#">Plagas y enfermedades</a>
+          <a href="#">Usuarios</a>
+        </div>
+      </div>
+
+    </nav>
+
+    <div class="barra__menu barra__menu--derecha">
+      <div class="desplegable">
+        <a class="barra__link" href="#" aria-haspopup="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/>
+            <circle cx="12" cy="10" r="3.2"/>
+            <path d="M5.5 19a7 7 0 0 1 13 0"/>
+          </svg>
+          <span>Cuenta</span>
+          <svg class="desplegable__flecha" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true">
+            <path d="M1 3l4 4 4-4z"/>
+          </svg>
+        </a>
+        <div class="desplegable__lista desplegable__lista--derecha">
+          <a href="#">Mi perfil</a>
+          <a href="#">Preferencias</a>
+          <a href="#">Cerrar sesión</a>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <main class="contenido" id="contenido">
+    <div class="contenedor">
+
+      <p class="migas"><a href="listado_tabla.html">Parcelas</a> › P-08 Frente Ruta</p>
+
+      <div class="encabezado-ficha">
+        <h1 class="pagina__titulo">P-08 Frente Ruta</h1>
+        <span class="estado estado--3">Requiere intervención</span>
+      </div>
+      <p class="pagina__bajada">Perejil · A campo · Establecimiento La Esperanza</p>
+
+      <div class="ficha">
+
+        <div>
+          <section class="panel">
+            <h2 class="panel__titulo">Ubicación y puntos de muestreo</h2>
+            <div class="miniatura">
+              <svg viewBox="0 0 400 240" role="img"
+                   aria-label="Polígono de la parcela P-08 con doce puntos de muestreo distribuidos en grilla, dos de ellos marcados en rojo.">
+                <rect width="400" height="240" fill="#243016"/>
+                <ellipse cx="330" cy="40" rx="130" ry="70" fill="#2f4020" opacity="0.6"/>
+                <path d="M-10 210 C 90 196, 200 226, 300 206 S 390 186, 410 192"
+                      fill="none" stroke="#2b4a63" stroke-width="11" opacity="0.9"/>
+                <path d="M20 240 L 70 150 L 190 90 L 380 40"
+                      fill="none" stroke="#8b6f47" stroke-width="5" opacity="0.7"/>
+                <polygon points="70,45 330,38 342,192 82,200" fill="#c1440e"
+                         fill-opacity="0.34" stroke="#f2f4ee" stroke-width="2.5"/>
+                <g font-family="Source Sans 3, sans-serif" font-size="10" font-weight="600"
+                   text-anchor="middle" fill="#1b3209">
+        <circle cx="95" cy="70" r="9" fill="#f2b544" stroke="#ffffff" stroke-width="2"/>
+        <text x="95" y="74">1</text>
+        <circle cx="160" cy="62" r="9" fill="#f2b544" stroke="#ffffff" stroke-width="2"/>
+        <text x="160" y="66">2</text>
+        <circle cx="225" cy="68" r="9" fill="#f2b544" stroke="#ffffff" stroke-width="2"/>
+        <text x="225" y="72">3</text>
+        <circle cx="290" cy="78" r="9" fill="#c1440e" stroke="#ffffff" stroke-width="2"/>
+        <text x="290" y="82">4</text>
+        <circle cx="100" cy="118" r="9" fill="#f2b544" stroke="#ffffff" stroke-width="2"/>
+        <text x="100" y="122">5</text>
+        <circle cx="165" cy="110" r="9" fill="#f2b544" stroke="#ffffff" stroke-width="2"/>
+        <text x="165" y="114">6</text>
+        <circle cx="230" cy="116" r="9" fill="#c1440e" stroke="#ffffff" stroke-width="2"/>
+        <text x="230" y="120">7</text>
+        <circle cx="295" cy="126" r="9" fill="#f2b544" stroke="#ffffff" stroke-width="2"/>
+        <text x="295" y="130">8</text>
+        <circle cx="105" cy="166" r="9" fill="#f2b544" stroke="#ffffff" stroke-width="2"/>
+        <text x="105" y="170">9</text>
+        <circle cx="170" cy="158" r="9" fill="#f2b544" stroke="#ffffff" stroke-width="2"/>
+        <text x="170" y="162">10</text>
+        <circle cx="235" cy="164" r="9" fill="#f2b544" stroke="#ffffff" stroke-width="2"/>
+        <text x="235" y="168">11</text>
+        <circle cx="300" cy="174" r="9" fill="#f2b544" stroke="#ffffff" stroke-width="2"/>
+        <text x="300" y="178">12</text>
+                </g>
+              </svg>
+            </div>
+            <p class="campo__ayuda">
+              Doce puntos generados automáticamente sobre el polígono. Los puntos 4 y 7
+              registran presencia de pulgón por encima del umbral.
+            </p>
+          </section>
+
+          <section class="panel">
+            <h2 class="panel__titulo">Historial de muestreos</h2>
+            <div class="grilla-scroll">
+              <table class="grilla">
+                <thead>
+                  <tr>
+                    <th class="grilla__num">#</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Punto</th>
+                    <th scope="col">Observación</th>
+                    <th scope="col">Severidad</th>
+                    <th scope="col">Responsable</th>
+                    <th scope="col">Estado</th>
+                  </tr>
+                </thead>
+                <tbody>
+              <tr>
+                <td class="grilla__num">1</td>
+                <td>28/08/2026</td>
+                <td>PM-04</td>
+                <td>Pulgón</td>
+                <td>Alta</td>
+                <td>Ing. Duarte</td>
+                <td><span class="estado estado--3">Requiere intervención</span></td>
+              </tr>
+              <tr>
+                <td class="grilla__num">2</td>
+                <td>21/08/2026</td>
+                <td>PM-07</td>
+                <td>Malezas en entrefila</td>
+                <td>Media</td>
+                <td>Téc. Ferreyra</td>
+                <td><span class="estado estado--2">En seguimiento</span></td>
+              </tr>
+              <tr>
+                <td class="grilla__num">3</td>
+                <td>14/08/2026</td>
+                <td>PM-02</td>
+                <td>Recuento de plantas</td>
+                <td>—</td>
+                <td>Téc. Ferreyra</td>
+                <td><span class="estado estado--1">Sin novedades</span></td>
+              </tr>
+              <tr>
+                <td class="grilla__num">4</td>
+                <td>07/08/2026</td>
+                <td>PM-09</td>
+                <td>Control de brotación</td>
+                <td>—</td>
+                <td>Ing. Duarte</td>
+                <td><span class="estado estado--1">Sin novedades</span></td>
+              </tr>
+              <tr>
+                <td class="grilla__num">5</td>
+                <td>31/07/2026</td>
+                <td>PM-01</td>
+                <td>Muestra de suelo</td>
+                <td>—</td>
+                <td>Ing. Duarte</td>
+                <td><span class="estado estado--1">Sin novedades</span></td>
+              </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+
+        <div>
+          <section class="panel">
+            <h2 class="panel__titulo">Datos de la parcela</h2>
+            <dl class="datos">
+              <div><dt>Identificador</dt><dd>8</dd></div>
+              <div><dt>Cultivo</dt><dd>Perejil</dd></div>
+              <div><dt>Ciclo</dt><dd>Anual</dd></div>
+              <div><dt>Sistema de producción</dt><dd>A campo</dd></div>
+              <div><dt>Cantidad de plantas</dt><dd>10.000</dd></div>
+              <div><dt>Superficie</dt><dd>0,42 ha</dd></div>
+              <div><dt>Densidad</dt><dd>23.810 pl/ha</dd></div>
+              <div><dt>Fecha de plantación</dt><dd>12/05/2026</dd></div>
+              <div><dt>Puntos de muestreo</dt><dd>12</dd></div>
+              <div><dt>Último muestreo</dt><dd>28/08/2026</dd></div>
+              <div><dt>Estado</dt><dd>3 · Requiere intervención</dd></div>
+              <div><dt>Activa</dt><dd>Sí</dd></div>
+            </dl>
+            <p style="margin-top:var(--sp-4)">
+              <a class="boton boton--principal" href="comprar.html">Solicitar análisis</a>
+            </p>
+          </section>
+
+          <section class="panel">
+            <h2 class="panel__titulo">Fotografías del último muestreo</h2>
+            <div class="galeria">
+              <figure>Punto 4<br>hoja con pulgón</figure>
+              <figure>Punto 4<br>vista general</figure>
+              <figure>Punto 7<br>colonia en brote</figure>
+              <figure>Punto 7<br>envés de hoja</figure>
+              <figure>Punto 9<br>testigo sano</figure>
+              <figure>Entrefila<br>malezas</figure>
+            </div>
+          </section>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="pie">
+    <div class="pie__interior">
+      <div>
+        <p class="pie__titulo">SIGAgro</p>
+        <p>Establecimiento La Esperanza · Colonia Alberdi, Misiones</p>
+      </div>
+      <div>
+        <p class="pie__titulo">Grupo Nipintucu</p>
+        <p>Paradigmas y Lenguajes de Programación III</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

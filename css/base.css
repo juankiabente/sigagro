@@ -1,0 +1,364 @@
+/* ==========================================================================
+   SIGAgro — base.css
+   Tokens, reset, tipografía y componentes compartidos por todas las páginas.
+   NO agregar acá estilos de una sola página: eso va en paginas.css
+   ========================================================================== */
+
+/* --- 1. Tokens ---------------------------------------------------------- */
+
+:root {
+  /* Paleta */
+  --verde-noche:  #1b3209;
+  --verde-oscuro: #2d5016;
+  --verde-medio:  #4a7c2c;
+  --verde-claro:  #8fbc5a;
+  --ambar:        #d9a441;
+  --alerta:       #c1440e;
+  --tierra:       #8b6f47;
+
+  /* Interfaz */
+  --blanco:       #ffffff;
+  --crema:        #f7f5f0;
+  --gris-fondo:   #eceae4;
+  --gris-texto:   #2f3330;
+  --gris-suave:   #6b706b;
+  --gris-borde:   #d5d8d2;
+
+  /* Tipografía */
+  --fuente-titulo: "Bitter", Georgia, serif;
+  --fuente-texto:  "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+
+  --txt-xs:  0.75rem;
+  --txt-sm:  0.875rem;
+  --txt-md:  1rem;
+  --txt-lg:  1.25rem;
+  --txt-xl:  1.75rem;
+  --txt-2xl: 2.25rem;
+
+  /* Espaciado */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+
+  /* Varios */
+  --radio: 5px;
+  --barra-alto: 56px;
+  --sombra: 0 1px 5px rgba(0, 0, 0, 0.35);
+  --ancho-max: 1240px;
+  --borde: 1px solid var(--gris-borde);
+}
+
+/* --- 2. Reset ----------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1, h2, h3, h4,
+p, ul, ol, figure, table, fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+/* --- 3. Base ------------------------------------------------------------ */
+
+body {
+  font-family: var(--fuente-texto);
+  font-size: var(--txt-md);
+  line-height: 1.55;
+  color: var(--gris-texto);
+  background-color: var(--gris-fondo);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--fuente-titulo);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--verde-noche);
+}
+
+h1 { font-size: var(--txt-xl); }
+h2 { font-size: var(--txt-lg); }
+
+a {
+  color: var(--verde-oscuro);
+  text-underline-offset: 2px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--verde-medio);
+  outline-offset: 2px;
+}
+
+/* Pantallas de aplicación: el mapa ocupa todo el alto disponible */
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.saltar-contenido {
+  position: absolute;
+  left: -9999px;
+}
+
+.saltar-contenido:focus {
+  left: var(--sp-4);
+  top: var(--sp-4);
+  z-index: 900;
+  padding: var(--sp-2) var(--sp-4);
+  background: var(--blanco);
+  border-radius: var(--radio);
+}
+
+/* --- 4. Barra superior -------------------------------------------------- */
+
+.barra {
+  position: relative;
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-5);
+  height: var(--barra-alto);
+  padding-inline: var(--sp-4);
+  background-color: var(--blanco);
+  border-bottom: var(--borde);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.barra__marca {
+  flex-shrink: 0;
+  line-height: 0;
+}
+
+.barra__isotipo {
+  width: 38px;
+  height: 38px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.barra__menu {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.barra__menu--derecha {
+  margin-left: auto;
+}
+
+.barra__link {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-2) var(--sp-3);
+  border-radius: var(--radio);
+  font-size: var(--txt-sm);
+  font-weight: 600;
+  color: var(--gris-texto);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.barra__link:hover {
+  background-color: var(--gris-fondo);
+  color: var(--verde-oscuro);
+}
+
+.barra__link--activo {
+  color: var(--verde-oscuro);
+}
+
+.barra__link svg {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+}
+
+/* Menú desplegable sin JavaScript */
+.desplegable {
+  position: relative;
+}
+
+.desplegable__lista {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 190px;
+  padding: var(--sp-2);
+  background-color: var(--blanco);
+  border: var(--borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.desplegable:hover .desplegable__lista,
+.desplegable:focus-within .desplegable__lista {
+  visibility: visible;
+  opacity: 1;
+}
+
+.desplegable__lista--derecha {
+  left: auto;
+  right: 0;
+}
+
+.desplegable__lista a {
+  display: block;
+  padding: var(--sp-2) var(--sp-3);
+  border-radius: 3px;
+  font-size: var(--txt-sm);
+  color: var(--gris-texto);
+  text-decoration: none;
+}
+
+.desplegable__lista a:hover {
+  background-color: var(--gris-fondo);
+  color: var(--verde-oscuro);
+}
+
+.desplegable__flecha {
+  width: 9px;
+  height: 9px;
+  opacity: 0.6;
+}
+
+/* --- 5. Botones --------------------------------------------------------- */
+
+.boton {
+  display: inline-block;
+  font-size: var(--txt-sm);
+  font-weight: 600;
+  padding: var(--sp-3) var(--sp-5);
+  border: 2px solid transparent;
+  border-radius: var(--radio);
+  text-decoration: none;
+}
+
+.boton--principal {
+  background-color: var(--verde-oscuro);
+  color: var(--blanco);
+}
+
+.boton--principal:hover {
+  background-color: var(--verde-medio);
+  color: var(--blanco);
+}
+
+.boton--secundario {
+  background-color: var(--blanco);
+  color: var(--verde-oscuro);
+  border-color: var(--verde-oscuro);
+}
+
+.boton--secundario:hover {
+  background-color: var(--verde-oscuro);
+  color: var(--blanco);
+}
+
+/* --- 6. Etiquetas de estado sanitario ----------------------------------- */
+/* El estado de la parcela sale del último muestreo cargado.                 */
+
+.estado {
+  display: inline-block;
+  font-size: var(--txt-xs);
+  font-weight: 600;
+  padding: 1px var(--sp-3);
+  border-radius: 999px;
+  border: 1px solid;
+  white-space: nowrap;
+}
+
+.estado--1 {
+  background-color: #e9f3da;
+  border-color: var(--verde-claro);
+  color: var(--verde-oscuro);
+}
+
+.estado--2 {
+  background-color: #fbf1d9;
+  border-color: var(--ambar);
+  color: #7a5410;
+}
+
+.estado--3 {
+  background-color: #fae4da;
+  border-color: var(--alerta);
+  color: var(--alerta);
+}
+
+.estado--sin-datos {
+  background-color: var(--gris-fondo);
+  border-color: var(--gris-borde);
+  color: var(--gris-suave);
+}
+
+/* --- 7. Pie de página (páginas de contenido, no en el mapa) ------------- */
+
+.pie {
+  background-color: var(--verde-noche);
+  color: #c7cebc;
+  padding-block: var(--sp-6);
+  font-size: var(--txt-sm);
+}
+
+.pie__interior {
+  width: 100%;
+  max-width: var(--ancho-max);
+  margin-inline: auto;
+  padding-inline: var(--sp-5);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-5);
+  justify-content: space-between;
+}
+
+.pie__titulo {
+  color: var(--crema);
+  font-family: var(--fuente-titulo);
+  margin-bottom: var(--sp-1);
+}
+
+/* --- 8. Responsive ------------------------------------------------------ */
+
+@media (max-width: 900px) {
+  .barra {
+    gap: var(--sp-2);
+    padding-inline: var(--sp-2);
+  }
+
+  .barra__link span {
+    display: none;
+  }
+
+  .barra__link {
+    padding: var(--sp-2);
+  }
+}

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIGAgro — Mapa</title>
+  <link rel="icon" href="img/logo.jpeg">
+  <meta name="description" content="Sistema de gestión de parcelas y muestreos agronómicos.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/paginas.css">
+</head>
+
+<body class="app">
+  <a class="saltar-contenido" href="#mapa">Ir al mapa</a>
+
+  <!-- ==================== Barra superior ==================== -->
+  <header class="barra">
+
+    <a class="barra__marca" href="index.html" aria-label="SIGAgro, inicio">
+        <img class="barra__isotipo" src="img/logo.jpeg" alt="SIGAgro">
+        <circle cx="20" cy="20" r="19" fill="#8fbc5a" stroke="#2d5016" stroke-width="2"/>
+        <path d="M8 29 L14 15 L18 23 L22 17 L27 29 Z" fill="#1b3209"/>
+        <rect x="8" y="29" width="24" height="3" fill="#2d5016"/>
+      </svg>
+    </a>
+
+    <nav class="barra__menu" aria-label="Secciones del sistema">
+
+      <a class="barra__link" href="listado_tabla.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/>
+          <circle cx="12" cy="10" r="2.5"/>
+        </svg>
+        <span>Parcelas</span>
+      </a>
+
+      <a class="barra__link barra__link--activo" href="index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/>
+          <path d="M9 3v15M15 6v15"/>
+        </svg>
+        <span>Mapa</span>
+      </a>
+
+      <a class="barra__link" href="comprar.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M14 2v6h6"/>
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <path d="M9 15h6M9 11h3"/>
+        </svg>
+        <span>Solicitar análisis</span>
+      </a>
+
+      <div class="desplegable">
+        <a class="barra__link" href="#" aria-haspopup="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-2.7 1.1V21a2 2 0 1 1-4 0v-.1A1.6 1.6 0 0 0 7 19.4a1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0-1.1-2.7H1a2 2 0 1 1 0-4h.1A1.6 1.6 0 0 0 2.6 7a1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H7a1.6 1.6 0 0 0 1-1.5V1a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 2.7 1.1l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V7a1.6 1.6 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1z"/>
+          </svg>
+          <span>Admin</span>
+          <svg class="desplegable__flecha" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true">
+            <path d="M1 3l4 4 4-4z"/>
+          </svg>
+        </a>
+        <div class="desplegable__lista">
+          <a href="#">Establecimientos</a>
+          <a href="#">Catálogo de cultivos</a>
+          <a href="#">Plagas y enfermedades</a>
+          <a href="#">Usuarios</a>
+        </div>
+      </div>
+
+    </nav>
+
+    <div class="barra__menu barra__menu--derecha">
+      <div class="desplegable">
+        <a class="barra__link" href="#" aria-haspopup="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/>
+            <circle cx="12" cy="10" r="3.2"/>
+            <path d="M5.5 19a7 7 0 0 1 13 0"/>
+          </svg>
+          <span>Cuenta</span>
+          <svg class="desplegable__flecha" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true">
+            <path d="M1 3l4 4 4-4z"/>
+          </svg>
+        </a>
+        <div class="desplegable__lista desplegable__lista--derecha">
+          <a href="#">Mi perfil</a>
+          <a href="#">Preferencias</a>
+          <a href="#">Cerrar sesión</a>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <!-- ==================== Mapa ==================== -->
+  <main class="mapa" id="mapa">
+
+    <!-- Lienzo estático. Se reemplaza por el contenedor de Leaflet
+         en la etapa siguiente sin modificar el resto de la pantalla. -->
+    <div class="mapa__lienzo">
+      <svg viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice"
+           role="img"
+           aria-label="Mapa satelital del establecimiento La Esperanza con doce parcelas coloreadas según su estado sanitario y tres grupos de puntos de muestreo.">
+
+        <!-- Terreno -->
+        <rect width="1200" height="700" fill="#243016"/>
+        <path d="M0 0h1200v230c-180 40-360-30-560 20S180 300 0 250z" fill="#2b3a1a" opacity="0.8"/>
+        <path d="M0 520c220-60 400 40 640-10s360-70 560-20v210H0z" fill="#1f2a12" opacity="0.85"/>
+        <ellipse cx="1010" cy="150" rx="190" ry="120" fill="#2f4020" opacity="0.7"/>
+        <ellipse cx="150" cy="620" rx="220" ry="130" fill="#2f4020" opacity="0.6"/>
+
+        <!-- Arroyo -->
+        <path d="M-20 470 C 180 445, 300 520, 470 495 S 800 405, 1000 430 S 1160 455, 1220 445"
+              fill="none" stroke="#2b4a63" stroke-width="16" opacity="0.9"/>
+
+        <!-- Camino principal y huellas internas -->
+        <path d="M60 700 L 190 470 L 430 330 L 760 250 L 1160 190"
+              fill="none" stroke="#8b6f47" stroke-width="7" opacity="0.75"/>
+        <path d="M300 400 L 520 470 M 620 300 L 700 430 M 860 270 L 900 400"
+              fill="none" stroke="#7a6240" stroke-width="3"
+              stroke-dasharray="9 8" opacity="0.55"/>
+
+        <!-- ============ Parcelas ============ -->
+        <!-- Verde: sin novedades · Ámbar: en seguimiento · Rojo: requiere intervención -->
+        <g stroke="#f2f4ee" stroke-width="1.6" fill-opacity="0.82">
+
+          <!-- Invernaderos (bandas angostas) -->
+          <a class="mapa__parcela" href="producto.html">
+            <title>P-01 Invernadero Norte · Pimiento · 15.000 plantas</title>
+            <rect x="250" y="120" width="230" height="34" rx="3" fill="#8fbc5a"/>
+          </a>
+          <a class="mapa__parcela" href="producto.html">
+            <title>P-02 Invernadero Centro · Tomate redondo · 2.000 plantas</title>
+            <rect x="250" y="166" width="230" height="34" rx="3" fill="#8fbc5a"/>
+          </a>
+          <a class="mapa__parcela" href="producto.html">
+            <title>P-03 Invernadero Sur · Tomate cherry · 1.000 plantas</title>
+            <rect x="250" y="212" width="230" height="34" rx="3" fill="#d9a441"/>
+          </a>
+          <a class="mapa__parcela" href="producto.html">
+            <title>P-04 Invernadero Fondo · Berenjena · 1.000 plantas</title>
+            <rect x="250" y="258" width="230" height="34" rx="3" fill="#8fbc5a"/>
+          </a>
+
+          <!-- Módulo hidropónico -->
+          <a class="mapa__parcela" href="producto.html">
+            <title>P-05 Módulo hidropónico · Frutilla · 8.000 plantas</title>
+            <rect x="540" y="120" width="150" height="120" rx="4" fill="#8fbc5a"/>
+          </a>
+
+          <!-- Parcelas a campo -->
+          <a class="mapa__parcela" href="producto.html">
+            <title>P-06 Lote Alto · Cebollita · 20.000 plantas</title>
+            <polygon points="760,110 990,135 975,255 745,230" fill="#8fbc5a"/>
+          </a>
+          <a class="mapa__parcela" href="producto.html">
+            <title>P-07 Picada Larga · Mandioca · 18.000 plantas</title>
+            <polygon points="1010,150 1180,175 1165,300 995,275" fill="#8fbc5a"/>
+          </a>
+          <a class="mapa__parcela" href="producto.html">
+            <title>P-08 Frente Ruta · Perejil · 10.000 plantas</title>
+            <polygon points="230,330 470,315 485,420 245,440" fill="#c1440e"/>
+          </a>
+          <a class="mapa__parcela" href="producto.html">
+            <title>P-09 Bajo del Arroyo · Lechuga · 7.000 plantas</title>
+            <polygon points="520,320 740,300 755,400 535,420" fill="#8fbc5a"/>
+          </a>
+          <a class="mapa__parcela" href="producto.html">
+            <title>P-10 Cantera · Jengibre · 4.000 plantas</title>
+            <polygon points="800,300 985,320 970,415 785,395" fill="#d9a441"/>
+          </a>
+          <a class="mapa__parcela" href="producto.html">
+            <title>P-11 Costa Sur · Zapallito de tronco · 3.000 plantas</title>
+            <polygon points="330,530 540,545 525,640 315,625" fill="#8fbc5a"/>
+          </a>
+          <a class="mapa__parcela" href="producto.html">
+            <title>P-12 Loma Verde · Repollo corazón de buey · 2.000 plantas</title>
+            <polygon points="600,540 800,555 785,650 585,635" fill="#8fbc5a"/>
+          </a>
+          <a class="mapa__parcela" href="producto.html">
+            <title>P-13 Chacra Vieja · Akusai · 2.000 plantas (inactiva)</title>
+            <polygon points="860,545 1030,560 1018,650 848,635"
+                     fill="#9aa192" fill-opacity="0.45" stroke-dasharray="6 5"/>
+          </a>
+        </g>
+
+        <!-- Grupos de puntos de muestreo -->
+        <g font-family="Source Sans 3, sans-serif" font-size="15" font-weight="600"
+           text-anchor="middle" fill="#1b3209">
+          <circle cx="365" cy="205" r="21" fill="#f2b544" stroke="#ffffff" stroke-width="2.5"/>
+          <text x="365" y="211">24</text>
+          <circle cx="620" cy="360" r="21" fill="#f2b544" stroke="#ffffff" stroke-width="2.5"/>
+          <text x="620" y="366">16</text>
+          <circle cx="880" cy="205" r="21" fill="#f2b544" stroke="#ffffff" stroke-width="2.5"/>
+          <text x="880" y="211">11</text>
+          <circle cx="690" cy="595" r="18" fill="#f2b544" stroke="#ffffff" stroke-width="2.5"/>
+          <text x="690" y="601">7</text>
+        </g>
+
+        <!-- Topónimos -->
+        <g font-family="Source Sans 3, sans-serif" font-size="13"
+           fill="#e6ebdd" opacity="0.65">
+          <text x="90" y="200">Colonia Alberdi</text>
+          <text x="1050" y="640">Arroyo del Medio</text>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Herramientas -->
+    <div class="mapa__herramientas">
+      <a class="herramienta" href="listado_tabla.html" title="Ver parcelas en tabla"
+         aria-label="Ver parcelas en tabla">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>
+        </svg>
+      </a>
+      <a class="herramienta" href="comprar.html" title="Nueva solicitud de análisis"
+         aria-label="Nueva solicitud de análisis">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 5v14M5 12h14"/>
+        </svg>
+      </a>
+      <a class="herramienta" href="listado_box.html" title="Ver parcelas en tarjetas"
+         aria-label="Ver parcelas en tarjetas">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <rect x="3" y="3" width="7" height="7"/>
+          <rect x="14" y="3" width="7" height="7"/>
+          <rect x="3" y="14" width="7" height="7"/>
+          <rect x="14" y="14" width="7" height="7"/>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Panel de capas -->
+    <aside class="capas" aria-label="Control de capas">
+
+      <fieldset class="capas__grupo">
+        <legend class="capas__titulo">Mapa base</legend>
+        <label class="capas__opcion">
+          <input type="radio" name="base" value="osm">
+          OpenStreetMap
+        </label>
+        <label class="capas__opcion">
+          <input type="radio" name="base" value="satelite" checked>
+          Satélite
+        </label>
+      </fieldset>
+
+      <fieldset class="capas__grupo">
+        <legend class="capas__titulo">Capas</legend>
+
+        <label class="capas__opcion">
+          <input type="checkbox" checked>
+          Parcelas
+        </label>
+
+        <div class="capas__subgrupo">
+          <div class="capas__leyenda">
+            <p class="capas__referencia">
+              <span class="capas__muestra capas__muestra--1"></span>
+              1 · Sin novedades
+            </p>
+            <p class="capas__referencia">
+              <span class="capas__muestra capas__muestra--2"></span>
+              2 · En seguimiento
+            </p>
+            <p class="capas__referencia">
+              <span class="capas__muestra capas__muestra--3"></span>
+              3 · Requiere intervención
+            </p>
+            <p class="capas__referencia">
+              <span class="capas__muestra capas__muestra--0"></span>
+              Sin muestreo
+            </p>
+          </div>
+        </div>
+
+        <label class="capas__opcion">
+          <input type="checkbox" checked>
+          Puntos de muestreo
+        </label>
+
+        <label class="capas__opcion">
+          <input type="checkbox">
+          Mostrar inactivas
+        </label>
+      </fieldset>
+
+    </aside>
+
+    <!-- Ficha rápida de la parcela seleccionada -->
+    <div class="resumen-parcela">
+      <div class="resumen-parcela__encabezado">
+        <span class="resumen-parcela__nombre">P-08 Frente Ruta</span>
+        <span class="estado estado--3">Estado 3</span>
+      </div>
+      <dl class="resumen-parcela__datos">
+        <div><dt>Cultivo</dt><dd>Perejil</dd></div>
+        <div><dt>Plantas</dt><dd>10.000</dd></div>
+        <div><dt>Superficie</dt><dd>0,42 ha</dd></div>
+        <div><dt>Producción</dt><dd>A campo</dd></div>
+        <div><dt>Último muestreo</dt><dd>28/08/2026</dd></div>
+      </dl>
+      <a class="resumen-parcela__pie" href="producto.html">Ver ficha completa</a>
+    </div>
+
+    <!-- Controles del mapa -->
+    <div class="mapa__zoom">
+      <button type="button" aria-label="Acercar">+</button>
+      <button type="button" aria-label="Alejar">−</button>
+    </div>
+
+    <p class="mapa__escala">100 m</p>
+    <p class="mapa__pie">Establecimiento La Esperanza · Colonia Alberdi, Misiones</p>
+
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIGAgro — Parcelas en tarjetas</title>
+  <link rel="icon" href="img/logo.jpeg"
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/paginas.css">
+</head>
+
+<body class="pagina">
+  <a class="saltar-contenido" href="#contenido">Ir al contenido</a>
+
+  <header class="barra">
+
+    <a class="barra__marca" href="index.html" aria-label="SIGAgro, inicio">
+        <img class="barra__isotipo" src="img/logo.jpeg" alt="SIGAgro">
+        <circle cx="20" cy="20" r="19" fill="#8fbc5a" stroke="#2d5016" stroke-width="2"/>
+        <path d="M8 29 L14 15 L18 23 L22 17 L27 29 Z" fill="#1b3209"/>
+        <rect x="8" y="29" width="24" height="3" fill="#2d5016"/>
+      </svg>
+    </a>
+
+    <nav class="barra__menu" aria-label="Secciones del sistema">
+
+      <a class="barra__link barra__link--activo" href="listado_tabla.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/>
+          <circle cx="12" cy="10" r="2.5"/>
+        </svg>
+        <span>Parcelas</span>
+      </a>
+
+      <a class="barra__link" href="index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/>
+          <path d="M9 3v15M15 6v15"/>
+        </svg>
+        <span>Mapa</span>
+      </a>
+
+      <a class="barra__link" href="comprar.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M14 2v6h6"/>
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <path d="M9 15h6M9 11h3"/>
+        </svg>
+        <span>Solicitar análisis</span>
+      </a>
+
+      <div class="desplegable">
+        <a class="barra__link" href="#" aria-haspopup="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M20 12a8 8 0 0 0-.2-1.7l2-1.6-2-3.4-2.4 1a8 8 0 0 0-3-1.7L14 2h-4l-.4 2.6a8 8 0 0 0-3 1.7l-2.4-1-2 3.4 2 1.6a8 8 0 0 0 0 3.4l-2 1.6 2 3.4 2.4-1a8 8 0 0 0 3 1.7L10 22h4l.4-2.6a8 8 0 0 0 3-1.7l2.4 1 2-3.4-2-1.6c.1-.6.2-1.1.2-1.7z"/>
+          </svg>
+          <span>Admin</span>
+          <svg class="desplegable__flecha" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true">
+            <path d="M1 3l4 4 4-4z"/>
+          </svg>
+        </a>
+        <div class="desplegable__lista">
+          <a href="#">Establecimientos</a>
+          <a href="#">Catálogo de cultivos</a>
+          <a href="#">Plagas y enfermedades</a>
+          <a href="#">Usuarios</a>
+        </div>
+      </div>
+
+    </nav>
+
+    <div class="barra__menu barra__menu--derecha">
+      <div class="desplegable">
+        <a class="barra__link" href="#" aria-haspopup="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/>
+            <circle cx="12" cy="10" r="3.2"/>
+            <path d="M5.5 19a7 7 0 0 1 13 0"/>
+          </svg>
+          <span>Cuenta</span>
+          <svg class="desplegable__flecha" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true">
+            <path d="M1 3l4 4 4-4z"/>
+          </svg>
+        </a>
+        <div class="desplegable__lista desplegable__lista--derecha">
+          <a href="#">Mi perfil</a>
+          <a href="#">Preferencias</a>
+          <a href="#">Cerrar sesión</a>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <main class="contenido" id="contenido">
+    <div class="contenedor">
+
+      <h1 class="pagina__titulo">Parcelas</h1>
+      <p class="pagina__bajada">Establecimiento La Esperanza · Colonia Alberdi, Misiones</p>
+
+      <div class="pagina__barra">
+        <p class="pagina__conteo">
+          Mostrando <strong>1-13</strong> de <strong>13</strong> parcelas.
+        </p>
+        <div class="pagina__herramientas">
+
+        <div class="vistas">
+          <a class="" href="listado_tabla.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>
+            </svg>
+            Tabla
+          </a>
+          <a class="vistas--activa" href="listado_box.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+              <rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+            </svg>
+            Tarjetas
+          </a>
+        </div>
+          <a class="boton boton--secundario boton--chico" href="#">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+            </svg>
+            Exportar
+          </a>
+        </div>
+      </div>
+
+      <div class="tarjetas">
+        <a class="tarjeta" href="producto.html">
+          <div class="tarjeta__vista">
+            <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="320" height="180" fill="#243016"/>
+              <ellipse cx="70" cy="150" rx="120" ry="70" fill="#2f4020" opacity="0.6"/>
+              <path d="M-10 130 C 60 118, 130 152, 200 136 S 300 112, 330 122"
+                    fill="none" stroke="#2b4a63" stroke-width="9" opacity="0.85"/>
+              <polygon points="72,48 246,38 258,124 84,136" fill="#8fbc5a"
+                       fill-opacity="0.82" stroke="#f2f4ee" stroke-width="2"
+                       stroke-dasharray="0"/>
+              <g fill="#f2b544" stroke="#ffffff" stroke-width="1.5">
+                <circle cx="120" cy="70" r="5"/><circle cx="175" cy="66" r="5"/>
+                <circle cx="220" cy="78" r="5"/><circle cx="128" cy="105" r="5"/>
+                <circle cx="180" cy="100" r="5"/><circle cx="228" cy="108" r="5"/>
+              </g>
+            </svg>
+          </div>
+          <div class="tarjeta__cuerpo">
+            <div class="tarjeta__encabezado">
+              <p class="tarjeta__nombre">P-01 Invernadero Norte</p>
+              <span class="estado estado--1">Sin novedades</span>
+            </div>
+            <p class="tarjeta__cultivo">Pimiento · Invernadero</p>
+            <div class="tarjeta__datos">
+              <p class="tarjeta__dato"><span>Plantas</span><strong>15.000</strong></p>
+              <p class="tarjeta__dato"><span>Superficie</span><strong>0,30 ha</strong></p>
+              <p class="tarjeta__dato"><span>Últ. muestreo</span><strong>26/08/2026</strong></p>
+              <p class="tarjeta__dato"><span>Id</span><strong>1</strong></p>
+            </div>
+          </div>
+        </a>
+        <a class="tarjeta" href="producto.html">
+          <div class="tarjeta__vista">
+            <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="320" height="180" fill="#243016"/>
+              <ellipse cx="70" cy="150" rx="120" ry="70" fill="#2f4020" opacity="0.6"/>
+              <path d="M-10 130 C 60 118, 130 152, 200 136 S 300 112, 330 122"
+                    fill="none" stroke="#2b4a63" stroke-width="9" opacity="0.85"/>
+              <polygon points="72,48 246,38 258,124 84,136" fill="#8fbc5a"
+                       fill-opacity="0.82" stroke="#f2f4ee" stroke-width="2"
+                       stroke-dasharray="0"/>
+              <g fill="#f2b544" stroke="#ffffff" stroke-width="1.5">
+                <circle cx="120" cy="70" r="5"/><circle cx="175" cy="66" r="5"/>
+                <circle cx="220" cy="78" r="5"/><circle cx="128" cy="105" r="5"/>
+                <circle cx="180" cy="100" r="5"/><circle cx="228" cy="108" r="5"/>
+              </g>
+            </svg>
+          </div>
+          <div class="tarjeta__cuerpo">
+            <div class="tarjeta__encabezado">
+              <p class="tarjeta__nombre">P-02 Invernadero Centro</p>
+              <span class="estado estado--1">Sin novedades</span>
+            </div>
+            <p class="tarjeta__cultivo">Tomate redondo · Invernadero</p>
+            <div class="tarjeta__datos">
+              <p class="tarjeta__dato"><span>Plantas</span><strong>2.000</strong></p>
+              <p class="tarjeta__dato"><span>Superficie</span><strong>0,08 ha</strong></p>
+              <p class="tarjeta__dato"><span>Últ. muestreo</span><strong>26/08/2026</strong></p>
+              <p class="tarjeta__dato"><span>Id</span><strong>2</strong></p>
+            </div>
+          </div>
+        </a>
+        <a class="tarjeta" href="producto.html">
+          <div class="tarjeta__vista">
+            <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="320" height="180" fill="#243016"/>
+              <ellipse cx="70" cy="150" rx="120" ry="70" fill="#2f4020" opacity="0.6"/>
+              <path d="M-10 130 C 60 118, 130 152, 200 136 S 300 112, 330 122"
+                    fill="none" stroke="#2b4a63" stroke-width="9" opacity="0.85"/>
+              <polygon points="72,48 246,38 258,124 84,136" fill="#d9a441"
+                       fill-opacity="0.82" stroke="#f2f4ee" stroke-width="2"
+                       stroke-dasharray="0"/>
+              <g fill="#f2b544" stroke="#ffffff" stroke-width="1.5">
+                <circle cx="120" cy="70" r="5"/><circle cx="175" cy="66" r="5"/>
+                <circle cx="220" cy="78" r="5"/><circle cx="128" cy="105" r="5"/>
+                <circle cx="180" cy="100" r="5"/><circle cx="228" cy="108" r="5"/>
+              </g>
+            </svg>
+          </div>
+          <div class="tarjeta__cuerpo">
+            <div class="tarjeta__encabezado">
+              <p class="tarjeta__nombre">P-03 Invernadero Sur</p>
+              <span class="estado estado--2">En seguimiento</span>
+            </div>
+            <p class="tarjeta__cultivo">Tomate cherry · Invernadero</p>
+            <div class="tarjeta__datos">
+              <p class="tarjeta__dato"><span>Plantas</span><strong>1.000</strong></p>
+              <p class="tarjeta__dato"><span>Superficie</span><strong>0,05 ha</strong></p>
+              <p class="tarjeta__dato"><span>Últ. muestreo</span><strong>25/08/2026</strong></p>
+              <p class="tarjeta__dato"><span>Id</span><strong>3</strong></p>
+            </div>
+          </div>
+        </a>
+        <a class="tarjeta" href="producto.html">
+          <div class="tarjeta__vista">
+            <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="320" height="180" fill="#243016"/>
+              <ellipse cx="70" cy="150" rx="120" ry="70" fill="#2f4020" opacity="0.6"/>
+              <path d="M-10 130 C 60 118, 130 152, 200 136 S 300 112, 330 122"
+                    fill="none" stroke="#2b4a63" stroke-width="9" opacity="0.85"/>
+              <polygon points="72,48 246,38 258,124 84,136" fill="#8fbc5a"
+                       fill-opacity="0.82" stroke="#f2f4ee" stroke-width="2"
+                       stroke-dasharray="0"/>
+              <g fill="#f2b544" stroke="#ffffff" stroke-width="1.5">
+                <circle cx="120" cy="70" r="5"/><circle cx="175" cy="66" r="5"/>
+                <circle cx="220" cy="78" r="5"/><circle cx="128" cy="105" r="5"/>
+                <circle cx="180" cy="100" r="5"/><circle cx="228" cy="108" r="5"/>
+              </g>
+            </svg>
+          </div>
+          <div class="tarjeta__cuerpo">
+            <div class="tarjeta__encabezado">
+              <p class="tarjeta__nombre">P-04 Invernadero Fondo</p>
+              <span class="estado estado--1">Sin novedades</span>
+            </div>
+            <p class="tarjeta__cultivo">Berenjena · Invernadero</p>
+            <div class="tarjeta__datos">
+              <p class="tarjeta__dato"><span>Plantas</span><strong>1.000</strong></p>
+              <p class="tarjeta__dato"><span>Superficie</span><strong>0,06 ha</strong></p>
+              <p class="tarjeta__dato"><span>Últ. muestreo</span><strong>24/08/2026</strong></p>
+              <p class="tarjeta__dato"><span>Id</span><strong>4</strong></p>
+            </div>
+          </div>
+        </a>
+        <a class="tarjeta" href="producto.html">
+          <div class="tarjeta__vista">
+            <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="320" height="180" fill="#243016"/>
+              <ellipse cx="70" cy="150" rx="120" ry="70" fill="#2f4020" opacity="0.6"/>
+              <path d="M-10 130 C 60 118, 130 152, 200 136 S 300 112, 330 122"
+                    fill="none" stroke="#2b4a63" stroke-width="9" opacity="0.85"/>
+              <polygon points="72,48 246,38 258,124 84,136" fill="#8fbc5a"
+                       fill-opacity="0.82" stroke="#f2f4ee" stroke-width="2"
+                       stroke-dasharray="0"/>
+              <g fill="#f2b544" stroke="#ffffff" stroke-width="1.5">
+                <circle cx="120" cy="70" r="5"/><circle cx="175" cy="66" r="5"/>
+                <circle cx="220" cy="78" r="5"/><circle cx="128" cy="105" r="5"/>
+                <circle cx="180" cy="100" r="5"/><circle cx="228" cy="108" r="5"/>
+              </g>
+            </svg>
+          </div>
+          <div class="tarjeta__cuerpo">
+            <div class="tarjeta__encabezado">
+              <p class="tarjeta__nombre">P-05 Módulo hidropónico</p>
+              <span class="estado estado--1">Sin novedades</span>
+            </div>
+            <p class="tarjeta__cultivo">Frutilla · Hidroponía</p>
+            <div class="tarjeta__datos">
+              <p class="tarjeta__dato"><span>Plantas</span><strong>8.000</strong></p>
+              <p class="tarjeta__dato"><span>Superficie</span><strong>0,18 ha</strong></p>
+              <p class="tarjeta__dato"><span>Últ. muestreo</span><strong>28/08/2026</strong></p>
+              <p class="tarjeta__dato"><span>Id</span><strong>5</strong></p>
+            </div>
+          </div>
+        </a>
+        <a class="tarjeta" href="producto.html">
+          <div class="tarjeta__vista">
+            <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="320" height="180" fill="#243016"/>
+              <ellipse cx="70" cy="150" rx="120" ry="70" fill="#2f4020" opacity="0.6"/>
+              <path d="M-10 130 C 60 118, 130 152, 200 136 S 300 112, 330 122"
+                    fill="none" stroke="#2b4a63" stroke-width="9" opacity="0.85"/>
+              <polygon points="72,48 246,38 258,124 84,136" fill="#8fbc5a"
+                       fill-opacity="0.82" stroke="#f2f4ee" stroke-width="2"
+                       stroke-dasharray="0"/>
+              <g fill="#f2b544" stroke="#ffffff" stroke-width="1.5">
+                <circle cx="120" cy="70" r="5"/><circle cx="175" cy="66" r="5"/>
+                <circle cx="220" cy="78" r="5"/><circle cx="128" cy="105" r="5"/>
+                <circle cx="180" cy="100" r="5"/><circle cx="228" cy="108" r="5"/>
+              </g>
+            </svg>
+          </div>
+          <div class="tarjeta__cuerpo">
+            <div class="tarjeta__encabezado">
+              <p class="tarjeta__nombre">P-06 Lote Alto</p>
+              <span class="estado estado--1">Sin novedades</span>
+            </div>
+            <p class="tarjeta__cultivo">Cebollita · A campo</p>
+            <div class="tarjeta__datos">
+              <p class="tarjeta__dato"><span>Plantas</span><strong>20.000</strong></p>
+              <p class="tarjeta__dato"><span>Superficie</span><strong>0,65 ha</strong></p>
+              <p class="tarjeta__dato"><span>Últ. muestreo</span><strong>27/08/2026</strong></p>
+              <p class="tarjeta__dato"><span>Id</span><strong>6</strong></p>
+            </div>
+          </div>
+        </a>
+        <a class="tarjeta" href="producto.html">
+          <div class="tarjeta__vista">
+            <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="320" height="180" fill="#243016"/>
+              <ellipse cx="70" cy="150" rx="120" ry="70" fill="#2f4020" opacity="0.6"/>
+              <path d="M-10 130 C 60 118, 130 152, 200 136 S 300 112, 330 122"
+                    fill="none" stroke="#2b4a63" stroke-width="9" opacity="0.85"/>
+              <polygon points="72,48 246,38 258,124 84,136" fill="#8fbc5a"
+                       fill-opacity="0.82" stroke="#f2f4ee" stroke-width="2"
+                       stroke-dasharray="0"/>
+              <g fill="#f2b544" stroke="#ffffff" stroke-width="1.5">
+                <circle cx="120" cy="70" r="5"/><circle cx="175" cy="66" r="5"/>
+                <circle cx="220" cy="78" r="5"/><circle cx="128" cy="105" r="5"/>
+                <circle cx="180" cy="100" r="5"/><circle cx="228" cy="108" r="5"/>
+              </g>
+            </svg>
+          </div>
+          <div class="tarjeta__cuerpo">
+            <div class="tarjeta__encabezado">
+              <p class="tarjeta__nombre">P-07 Picada Larga</p>
+              <span class="estado estado--1">Sin novedades</span>
+            </div>
+            <p class="tarjeta__cultivo">Mandioca · A campo</p>
+            <div class="tarjeta__datos">
+              <p class="tarjeta__dato"><span>Plantas</span><strong>18.000</strong></p>
+              <p class="tarjeta__dato"><span>Superficie</span><strong>1,20 ha</strong></p>
+              <p class="tarjeta__dato"><span>Últ. muestreo</span><strong>22/08/2026</strong></p>
+              <p class="tarjeta__dato"><span>Id</span><strong>7</strong></p>
+            </div>
+          </div>
+        </a>
+        <a class="tarjeta" href="producto.html">
+          <div class="tarjeta__vista">
+            <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="320" height="180" fill="#243016"/>
+              <ellipse cx="70" cy="150" rx="120" ry="70" fill="#2f4020" opacity="0.6"/>
+              <path d="M-10 130 C 60 118, 130 152, 200 136 S 300 112, 330 122"
+                    fill="none" stroke="#2b4a63" stroke-width="9" opacity="0.85"/>
+              <polygon points="72,48 246,38 258,124 84,136" fill="#c1440e"
+                       fill-opacity="0.82" stroke="#f2f4ee" stroke-width="2"
+                       stroke-dasharray="0"/>
+              <g fill="#f2b544" stroke="#ffffff" stroke-width="1.5">
+                <circle cx="120" cy="70" r="5"/><circle cx="175" cy="66" r="5"/>
+                <circle cx="220" cy="78" r="5"/><circle cx="128" cy="105" r="5"/>
+                <circle cx="180" cy="100" r="5"/><circle cx="228" cy="108" r="5"/>
+              </g>
+            </svg>
+          </div>
+          <div class="tarjeta__cuerpo">
+            <div class="tarjeta__encabezado">
+              <p class="tarjeta__nombre">P-08 Frente Ruta</p>
+              <span class="estado estado--3">Requiere intervención</span>
+            </div>
+            <p class="tarjeta__cultivo">Perejil · A campo</p>
+            <div class="tarjeta__datos">
+              <p class="tarjeta__dato"><span>Plantas</span><strong>10.000</strong></p>
+              <p class="tarjeta__dato"><span>Superficie</span><strong>0,42 ha</strong></p>
+              <p class="tarjeta__dato"><span>Últ. muestreo</span><strong>28/08/2026</strong></p>
+              <p class="tarjeta__dato"><span>Id</span><strong>8</strong></p>
+            </div>
+          </div>
+        </a>
+        <a class="tarjeta" href="producto.html">
+          <div class="tarjeta__vista">
+            <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="320" height="180" fill="#243016"/>
+              <ellipse cx="70" cy="150" rx="120" ry="70" fill="#2f4020" opacity="0.6"/>
+              <path d="M-10 130 C 60 118, 130 152, 200 136 S 300 112, 330 122"
+                    fill="none" stroke="#2b4a63" stroke-width="9" opacity="0.85"/>
+              <polygon points="72,48 246,38 258,124 84,136" fill="#8fbc5a"
+                       fill-opacity="0.82" stroke="#f2f4ee" stroke-width="2"
+                       stroke-dasharray="0"/>
+              <g fill="#f2b544" stroke="#ffffff" stroke-width="1.5">
+                <circle cx="120" cy="70" r="5"/><circle cx="175" cy="66" r="5"/>
+                <circle cx="220" cy="78" r="5"/><circle cx="128" cy="105" r="5"/>
+                <circle cx="180" cy="100" r="5"/><circle cx="228" cy="108" r="5"/>
+              </g>
+            </svg>
+          </div>
+          <div class="tarjeta__cuerpo">
+            <div class="tarjeta__encabezado">
+              <p class="tarjeta__nombre">P-09 Bajo del Arroyo</p>
+              <span class="estado estado--1">Sin novedades</span>
+            </div>
+            <p class="tarjeta__cultivo">Lechuga · A campo</p>
+            <div class="tarjeta__datos">
+              <p class="tarjeta__dato"><span>Plantas</span><strong>7.000</strong></p>
+              <p class="tarjeta__dato"><span>Superficie</span><strong>0,35 ha</strong></p>
+              <p class="tarjeta__dato"><span>Últ. muestreo</span><strong>27/08/2026</strong></p>
+              <p class="tarjeta__dato"><span>Id</span><strong>9</strong></p>
+            </div>
+          </div>
+        </a>
+        <a class="tarjeta" href="producto.html">
+          <div class="tarjeta__vista">
+            <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="320" height="180" fill="#243016"/>
+              <ellipse cx="70" cy="150" rx="120" ry="70" fill="#2f4020" opacity="0.6"/>
+              <path d="M-10 130 C 60 118, 130 152, 200 136 S 300 112, 330 122"
+                    fill="none" stroke="#2b4a63" stroke-width="9" opacity="0.85"/>
+              <polygon points="72,48 246,38 258,124 84,136" fill="#d9a441"
+                       fill-opacity="0.82" stroke="#f2f4ee" stroke-width="2"
+                       stroke-dasharray="0"/>
+              <g fill="#f2b544" stroke="#ffffff" stroke-width="1.5">
+                <circle cx="120" cy="70" r="5"/><circle cx="175" cy="66" r="5"/>
+                <circle cx="220" cy="78" r="5"/><circle cx="128" cy="105" r="5"/>
+                <circle cx="180" cy="100" r="5"/><circle cx="228" cy="108" r="5"/>
+              </g>
+            </svg>
+          </div>
+          <div class="tarjeta__cuerpo">
+            <div class="tarjeta__encabezado">
+              <p class="tarjeta__nombre">P-10 Cantera</p>
+              <span class="estado estado--2">En seguimiento</span>
+            </div>
+            <p class="tarjeta__cultivo">Jengibre · A campo</p>
+            <div class="tarjeta__datos">
+              <p class="tarjeta__dato"><span>Plantas</span><strong>4.000</strong></p>
+              <p class="tarjeta__dato"><span>Superficie</span><strong>0,28 ha</strong></p>
+              <p class="tarjeta__dato"><span>Últ. muestreo</span><strong>21/08/2026</strong></p>
+              <p class="tarjeta__dato"><span>Id</span><strong>10</strong></p>
+            </div>
+          </div>
+        </a>
+        <a class="tarjeta" href="producto.html">
+          <div class="tarjeta__vista">
+            <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="320" height="180" fill="#243016"/>
+              <ellipse cx="70" cy="150" rx="120" ry="70" fill="#2f4020" opacity="0.6"/>
+              <path d="M-10 130 C 60 118, 130 152, 200 136 S 300 112, 330 122"
+                    fill="none" stroke="#2b4a63" stroke-width="9" opacity="0.85"/>
+              <polygon points="72,48 246,38 258,124 84,136" fill="#8fbc5a"
+                       fill-opacity="0.82" stroke="#f2f4ee" stroke-width="2"
+                       stroke-dasharray="0"/>
+              <g fill="#f2b544" stroke="#ffffff" stroke-width="1.5">
+                <circle cx="120" cy="70" r="5"/><circle cx="175" cy="66" r="5"/>
+                <circle cx="220" cy="78" r="5"/><circle cx="128" cy="105" r="5"/>
+                <circle cx="180" cy="100" r="5"/><circle cx="228" cy="108" r="5"/>
+              </g>
+            </svg>
+          </div>
+          <div class="tarjeta__cuerpo">
+            <div class="tarjeta__encabezado">
+              <p class="tarjeta__nombre">P-11 Costa Sur</p>
+              <span class="estado estado--1">Sin novedades</span>
+            </div>
+            <p class="tarjeta__cultivo">Zapallito de tronco · A campo</p>
+            <div class="tarjeta__datos">
+              <p class="tarjeta__dato"><span>Plantas</span><strong>3.000</strong></p>
+              <p class="tarjeta__dato"><span>Superficie</span><strong>0,22 ha</strong></p>
+              <p class="tarjeta__dato"><span>Últ. muestreo</span><strong>20/08/2026</strong></p>
+              <p class="tarjeta__dato"><span>Id</span><strong>11</strong></p>
+            </div>
+          </div>
+        </a>
+        <a class="tarjeta" href="producto.html">
+          <div class="tarjeta__vista">
+            <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="320" height="180" fill="#243016"/>
+              <ellipse cx="70" cy="150" rx="120" ry="70" fill="#2f4020" opacity="0.6"/>
+              <path d="M-10 130 C 60 118, 130 152, 200 136 S 300 112, 330 122"
+                    fill="none" stroke="#2b4a63" stroke-width="9" opacity="0.85"/>
+              <polygon points="72,48 246,38 258,124 84,136" fill="#8fbc5a"
+                       fill-opacity="0.82" stroke="#f2f4ee" stroke-width="2"
+                       stroke-dasharray="0"/>
+              <g fill="#f2b544" stroke="#ffffff" stroke-width="1.5">
+                <circle cx="120" cy="70" r="5"/><circle cx="175" cy="66" r="5"/>
+                <circle cx="220" cy="78" r="5"/><circle cx="128" cy="105" r="5"/>
+                <circle cx="180" cy="100" r="5"/><circle cx="228" cy="108" r="5"/>
+              </g>
+            </svg>
+          </div>
+          <div class="tarjeta__cuerpo">
+            <div class="tarjeta__encabezado">
+              <p class="tarjeta__nombre">P-12 Loma Verde</p>
+              <span class="estado estado--1">Sin novedades</span>
+            </div>
+            <p class="tarjeta__cultivo">Repollo corazón de buey · A campo</p>
+            <div class="tarjeta__datos">
+              <p class="tarjeta__dato"><span>Plantas</span><strong>2.000</strong></p>
+              <p class="tarjeta__dato"><span>Superficie</span><strong>0,16 ha</strong></p>
+              <p class="tarjeta__dato"><span>Últ. muestreo</span><strong>19/08/2026</strong></p>
+              <p class="tarjeta__dato"><span>Id</span><strong>12</strong></p>
+            </div>
+          </div>
+        </a>
+        <a class="tarjeta tarjeta--inactiva" href="producto.html">
+          <div class="tarjeta__vista">
+            <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="320" height="180" fill="#243016"/>
+              <ellipse cx="70" cy="150" rx="120" ry="70" fill="#2f4020" opacity="0.6"/>
+              <path d="M-10 130 C 60 118, 130 152, 200 136 S 300 112, 330 122"
+                    fill="none" stroke="#2b4a63" stroke-width="9" opacity="0.85"/>
+              <polygon points="72,48 246,38 258,124 84,136" fill="#9aa192"
+                       fill-opacity="0.82" stroke="#f2f4ee" stroke-width="2"
+                       stroke-dasharray="6 5"/>
+              <g fill="#f2b544" stroke="#ffffff" stroke-width="1.5">
+                <circle cx="120" cy="70" r="5"/><circle cx="175" cy="66" r="5"/>
+                <circle cx="220" cy="78" r="5"/><circle cx="128" cy="105" r="5"/>
+                <circle cx="180" cy="100" r="5"/><circle cx="228" cy="108" r="5"/>
+              </g>
+            </svg>
+          </div>
+          <div class="tarjeta__cuerpo">
+            <div class="tarjeta__encabezado">
+              <p class="tarjeta__nombre">P-13 Chacra Vieja</p>
+              <span class="estado estado--sin-datos">Sin muestreo</span>
+            </div>
+            <p class="tarjeta__cultivo">Akusai · A campo</p>
+            <div class="tarjeta__datos">
+              <p class="tarjeta__dato"><span>Plantas</span><strong>2.000</strong></p>
+              <p class="tarjeta__dato"><span>Superficie</span><strong>0,14 ha</strong></p>
+              <p class="tarjeta__dato"><span>Últ. muestreo</span><strong>—</strong></p>
+              <p class="tarjeta__dato"><span>Id</span><strong>13</strong></p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="pie">
+    <div class="pie__interior">
+      <div>
+        <p class="pie__titulo">SIGAgro</p>
+        <p>Establecimiento La Esperanza · Colonia Alberdi, Misiones</p>
+      </div>
+      <div>
+        <p class="pie__titulo">Grupo Nipintucu</p>
+        <p>Paradigmas y Lenguajes de Programación III</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
