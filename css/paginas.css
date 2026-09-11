@@ -869,7 +869,7 @@
 @media (max-width: 900px) {
   .ficha,
   .formulario {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .contenedor {
@@ -879,4 +879,10 @@
   .campos-2 {
     grid-template-columns: 1fr;
   }
+}
+
+@media (max-width: 560px) {
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
