@@ -8,9 +8,8 @@ Desarrollado por el grupo **Nipintucu**.
 
 ## Integrantes
 
-- Juan Ignacio Abente ([@juankiabente](https://github.com/juankiabente))
-- Nombre Apellido (@usuario-github)
-- Nombre Apellido (@usuario-github)
+- Juan Carlos Abente ([@juankiabente](https://github.com/juankiabente))
+- Emilia Auras  ([@emiauras](https://github.com/Emiauras))
 
 ## Descripción
 
@@ -55,7 +54,7 @@ sigagro/
 
 ## Stack previsto
 
-PHP 8.2 · Yii2 · PostgreSQL + PostGIS · Leaflet
+PHP 8.2 · Yii2 · MySQL 8 · Leaflet
 
 ## Convenciones
 
