@@ -54,7 +54,7 @@ sigagro/
 
 ## Stack previsto
 
-PHP 8.2 · Yii2 · PostgreSQL + PostGIS · Leaflet
+PHP 8.2 · Yii2 · MySQL 8 · Leaflet
 
 ## Convenciones
 
