@@ -144,39 +144,73 @@
           </section>
 
           <section class="panel">
-            <h2 class="panel__titulo">Análisis solicitados <span class="requerido">*</span></h2>
-            <label class="opcion">
-              <input type="checkbox" name="analisis" value="1" checked>
-              <span>Análisis físico-químico de suelo<br><small class="campo__ayuda">P-08 Frente Ruta</small></span>
-              <span class="opcion__precio">$ 18.500</span>
-            </label>
-            <label class="opcion">
-              <input type="checkbox" name="analisis" value="2" checked>
-              <span>Análisis foliar completo<br><small class="campo__ayuda">P-08 Frente Ruta</small></span>
-              <span class="opcion__precio">$ 22.000</span>
-            </label>
-            <label class="opcion">
-              <input type="checkbox" name="analisis" value="3">
-              <span>Identificación de plaga (entomología)<br><small class="campo__ayuda">P-08 Frente Ruta</small></span>
-              <span class="opcion__precio">$ 12.400</span>
-            </label>
-            <label class="opcion">
-              <input type="checkbox" name="analisis" value="4">
-              <span>Diagnóstico fitopatológico<br><small class="campo__ayuda">P-10 Cantera</small></span>
-              <span class="opcion__precio">$ 15.800</span>
-            </label>
-            <label class="opcion">
-              <input type="checkbox" name="analisis" value="5">
-              <span>Análisis de agua de riego<br><small class="campo__ayuda">P-05 Módulo hidropónico</small></span>
-              <span class="opcion__precio">$ 9.600</span>
-            </label>
-            <label class="opcion">
-              <input type="checkbox" name="analisis" value="6">
-              <span>Recuento de nematodos<br><small class="campo__ayuda">P-06 Lote Alto</small></span>
-              <span class="opcion__precio">$ 14.200</span>
-            </label>
-          </section>
-        </div>
+                        <h2 class="panel__titulo">Análisis solicitados <span class="requerido">*</span></h2>
+
+            <div class="opcion opcion--analisis">
+              <input type="checkbox" id="a1" name="analisis" value="1" data-precio="18500" checked>
+              <label class="opcion__texto" for="a1">
+                Análisis físico-químico de suelo
+                <small class="campo__ayuda">P-08 Frente Ruta · $ 18.500 por muestra</small>
+              </label>
+              <input type="number" class="opcion__cantidad" value="2" min="0" max="99"
+                     aria-label="Cantidad de muestras de análisis de suelo">
+              <span class="opcion__subtotal">$ 0</span>
+            </div>
+
+            <div class="opcion opcion--analisis">
+              <input type="checkbox" id="a2" name="analisis" value="2" data-precio="22000" checked>
+              <label class="opcion__texto" for="a2">
+                Análisis foliar completo
+                <small class="campo__ayuda">P-08 Frente Ruta · $ 22.000 por muestra</small>
+              </label>
+              <input type="number" class="opcion__cantidad" value="1" min="0" max="99"
+                     aria-label="Cantidad de muestras de análisis foliar">
+              <span class="opcion__subtotal">$ 0</span>
+            </div>
+
+            <div class="opcion opcion--analisis">
+              <input type="checkbox" id="a3" name="analisis" value="3" data-precio="12400">
+              <label class="opcion__texto" for="a3">
+                Identificación de plaga (entomología)
+                <small class="campo__ayuda">P-08 Frente Ruta · $ 12.400 por muestra</small>
+              </label>
+              <input type="number" class="opcion__cantidad" value="1" min="0" max="99"
+                     aria-label="Cantidad de muestras de identificación de plaga">
+              <span class="opcion__subtotal">$ 0</span>
+            </div>
+
+            <div class="opcion opcion--analisis">
+              <input type="checkbox" id="a4" name="analisis" value="4" data-precio="15800">
+              <label class="opcion__texto" for="a4">
+                Diagnóstico fitopatológico
+                <small class="campo__ayuda">P-10 Cantera · $ 15.800 por muestra</small>
+              </label>
+              <input type="number" class="opcion__cantidad" value="1" min="0" max="99"
+                     aria-label="Cantidad de muestras de diagnóstico fitopatológico">
+              <span class="opcion__subtotal">$ 0</span>
+            </div>
+
+            <div class="opcion opcion--analisis">
+              <input type="checkbox" id="a5" name="analisis" value="5" data-precio="9600">
+              <label class="opcion__texto" for="a5">
+                Análisis de agua de riego
+                <small class="campo__ayuda">P-05 Módulo hidropónico · $ 9.600 por muestra</small>
+              </label>
+              <input type="number" class="opcion__cantidad" value="1" min="0" max="99"
+                     aria-label="Cantidad de muestras de agua de riego">
+              <span class="opcion__subtotal">$ 0</span>
+            </div>
+
+            <div class="opcion opcion--analisis">
+              <input type="checkbox" id="a6" name="analisis" value="6" data-precio="14200">
+              <label class="opcion__texto" for="a6">
+                Recuento de nematodos
+                <small class="campo__ayuda">P-06 Lote Alto · $ 14.200 por muestra</small>
+              </label>
+              <input type="number" class="opcion__cantidad" value="1" min="0" max="99"
+                     aria-label="Cantidad de muestras de recuento de nematodos">
+              <span class="opcion__subtotal">$ 0</span>
+            </div>
 
         <div>
           <section class="panel">
@@ -205,8 +239,8 @@
             </div>
 
             <div class="total">
-              <span>Total estimado</span>
-              <span>$ 40.500</span>
+              <span id="cantidad">0 muestras</span>
+              <span id="total">$ 0</span>
             </div>
 
             <div class="formulario__envio">
@@ -232,6 +266,7 @@
       </div>
     </div>
   </footer>
-
+ 
+  <script src="js/total.js"></script>
 </body>
 </html>
