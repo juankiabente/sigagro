@@ -13,6 +13,37 @@
 
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/paginas.css">
+
+  <style>
+    #mensajeCupon {
+      margin-top: var(--sp-2, 8px);
+      padding: 10px 12px;
+      border-radius: 6px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      display: none;
+    }
+    .mensaje-error {
+      background: #fdecea;
+      color: #b3261e;
+      border: 1px solid #f5c2c0;
+      display: block !important;
+    }
+    .mensaje-exito {
+      background: #e6f4ea;
+      color: #1e7e34;
+      border: 1px solid #b6e0c0;
+      display: block !important;
+    }
+    .campo-cupon {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+    .campo-cupon input[type="text"] {
+      flex: 1;
+    }
+  </style>
 </head>
 
 <body class="pagina">
@@ -238,6 +269,15 @@
               <input type="date" id="retiro" name="retiro" value="2026-09-08">
             </div>
 
+            <div class="campo" style="margin-top:var(--sp-4)">
+              <label for="cupon">Codigo de descuento</label>
+              <div class="campo-cupon">
+                <input type="text" id="cupon" name="cupon" placeholder="Ej: UCP10">
+                <button class="boton boton--secundario" type="button" onclick="validarCupon()">Aplicar</button>
+              </div>
+              <div id="mensajeCupon"></div>
+            </div>
+
             <div class="total">
               <span id="cantidad">0 muestras</span>
               <span id="total">$ 0</span>
@@ -268,5 +308,28 @@
   </footer>
  
   <script src="js/total.js"></script>
+  <script>
+    function validarCupon() {
+      const input = document.getElementById("cupon");
+      const mensaje = document.getElementById("mensajeCupon");
+ 
+      // Limpiar espacios y normalizar a mayúsculas
+      const codigo = input.value.trim().toUpperCase();
+ 
+      // Reiniciar clases antes de evaluar
+      mensaje.classList.remove("mensaje-error", "mensaje-exito");
+ 
+      if (codigo === "") {
+        mensaje.textContent = "Por favor, ingrese un código";
+        mensaje.classList.add("mensaje-error");
+      } else if (codigo === "UCP10") {
+        mensaje.textContent = "¡Cupón aplicado! Tenés un 10% de descuento";
+        mensaje.classList.add("mensaje-exito");
+      } else {
+        mensaje.textContent = "Código inválido o vencido";
+        mensaje.classList.add("mensaje-error");
+      }
+    }
+  </script>
 </body>
 </html>
