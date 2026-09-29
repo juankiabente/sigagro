@@ -1,0 +1,172 @@
+{
+  "establecimiento": "Establecimiento Andrade",
+  "localidad": "Colonia Alemana, Misiones",
+  "actualizado": "2026-09-28",
+  "estados": {
+    "0": {
+      "etiqueta": "Sin muestreo",
+      "color": "#9aa192",
+      "clase": "sin-datos"
+    },
+    "1": {
+      "etiqueta": "Sin novedades",
+      "color": "#8fbc5a",
+      "clase": "1"
+    },
+    "2": {
+      "etiqueta": "En seguimiento",
+      "color": "#d9a441",
+      "clase": "2"
+    },
+    "3": {
+      "etiqueta": "Requiere intervención",
+      "color": "#c1440e",
+      "clase": "3"
+    }
+  },
+  "parcelas": [
+    {
+      "id": 1,
+      "nombre": "P-01 Invernadero Norte",
+      "cultivo": "Pimiento",
+      "sistema": "Invernadero",
+      "plantas": 15000,
+      "superficie": 0.3,
+      "ultimoMuestreo": "2026-08-26",
+      "estado": 1,
+      "activa": true
+    },
+    {
+      "id": 2,
+      "nombre": "P-02 Invernadero Centro",
+      "cultivo": "Tomate redondo",
+      "sistema": "Invernadero",
+      "plantas": 2000,
+      "superficie": 0.08,
+      "ultimoMuestreo": "2026-08-26",
+      "estado": 1,
+      "activa": true
+    },
+    {
+      "id": 3,
+      "nombre": "P-03 Invernadero Sur",
+      "cultivo": "Tomate cherry",
+      "sistema": "Invernadero",
+      "plantas": 1000,
+      "superficie": 0.05,
+      "ultimoMuestreo": "2026-08-25",
+      "estado": 2,
+      "activa": true
+    },
+    {
+      "id": 4,
+      "nombre": "P-04 Invernadero Fondo",
+      "cultivo": "Berenjena",
+      "sistema": "Invernadero",
+      "plantas": 1000,
+      "superficie": 0.06,
+      "ultimoMuestreo": "2026-08-24",
+      "estado": 1,
+      "activa": true
+    },
+    {
+      "id": 5,
+      "nombre": "P-05 Módulo hidropónico",
+      "cultivo": "Frutilla",
+      "sistema": "Hidroponía",
+      "plantas": 8000,
+      "superficie": 0.18,
+      "ultimoMuestreo": "2026-08-28",
+      "estado": 1,
+      "activa": true
+    },
+    {
+      "id": 6,
+      "nombre": "P-06 Lote Alto",
+      "cultivo": "Cebollita",
+      "sistema": "A campo",
+      "plantas": 20000,
+      "superficie": 0.65,
+      "ultimoMuestreo": "2026-08-27",
+      "estado": 1,
+      "activa": true
+    },
+    {
+      "id": 7,
+      "nombre": "P-07 Picada Larga",
+      "cultivo": "Mandioca",
+      "sistema": "A campo",
+      "plantas": 18000,
+      "superficie": 1.2,
+      "ultimoMuestreo": "2026-08-22",
+      "estado": 1,
+      "activa": true
+    },
+    {
+      "id": 8,
+      "nombre": "P-08 Frente Ruta",
+      "cultivo": "Perejil",
+      "sistema": "A campo",
+      "plantas": 10000,
+      "superficie": 0.42,
+      "ultimoMuestreo": "2026-08-28",
+      "estado": 3,
+      "activa": true
+    },
+    {
+      "id": 9,
+      "nombre": "P-09 Bajo del Arroyo",
+      "cultivo": "Lechuga",
+      "sistema": "A campo",
+      "plantas": 7000,
+      "superficie": 0.35,
+      "ultimoMuestreo": "2026-08-27",
+      "estado": 1,
+      "activa": true
+    },
+    {
+      "id": 10,
+      "nombre": "P-10 Cantera",
+      "cultivo": "Jengibre",
+      "sistema": "A campo",
+      "plantas": 4000,
+      "superficie": 0.28,
+      "ultimoMuestreo": "2026-08-21",
+      "estado": 2,
+      "activa": true
+    },
+    {
+      "id": 11,
+      "nombre": "P-11 Costa Sur",
+      "cultivo": "Zapallito de tronco",
+      "sistema": "A campo",
+      "plantas": 3000,
+      "superficie": 0.22,
+      "ultimoMuestreo": "2026-08-20",
+      "estado": 1,
+      "activa": true
+    },
+    {
+      "id": 12,
+      "nombre": "P-12 Loma Verde",
+      "cultivo": "Repollo corazón de buey",
+      "sistema": "A campo",
+      "plantas": 2000,
+      "superficie": 0.16,
+      "ultimoMuestreo": "2026-08-19",
+      "estado": 1,
+      "activa": true
+    },
+    {
+      "id": 13,
+      "nombre": "P-13 Chacra Vieja",
+      "cultivo": "Akusai",
+      "sistema": "A campo",
+      "plantas": 2000,
+      "superficie": 0.14,
+      "ultimoMuestreo": null,
+      "estado": 0,
+      "activa": false
+    }
+  ]
+}
