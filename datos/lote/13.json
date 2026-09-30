@@ -1,0 +1,23 @@
+{
+  "lote": {
+    "id_lote": 13,
+    "nombre": "P-13 Chacra Vieja",
+    "sistema_cultivo": "suelo",
+    "superficie_ha": 0.14,
+    "puntos_muestreo_activos": 0
+  },
+  "campana": {
+    "id_campana": 113,
+    "cultivo": {
+      "id_cultivo": 13,
+      "nombre": "Akusai",
+      "tipo": "hoja"
+    },
+    "cantidad_plantas": 2000,
+    "fecha_siembra": "2026-03-10",
+    "fecha_cosecha_estimada": "2026-06-10",
+    "fecha_cosecha_real": "2026-06-18",
+    "estado": "finalizada"
+  },
+  "observaciones": []
+}

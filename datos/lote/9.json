@@ -1,0 +1,60 @@
+{
+  "lote": {
+    "id_lote": 9,
+    "nombre": "P-09 Bajo del Arroyo",
+    "sistema_cultivo": "suelo",
+    "superficie_ha": 0.35,
+    "puntos_muestreo_activos": 6
+  },
+  "campana": {
+    "id_campana": 109,
+    "cultivo": {
+      "id_cultivo": 9,
+      "nombre": "Lechuga",
+      "tipo": "hoja"
+    },
+    "cantidad_plantas": 7000,
+    "fecha_siembra": "2026-08-10",
+    "fecha_cosecha_estimada": "2026-10-10",
+    "fecha_cosecha_real": null,
+    "estado": "activa"
+  },
+  "observaciones": [
+    {
+      "id_observacion": 320,
+      "fecha": "2026-08-27",
+      "punto_codigo": "PM-03",
+      "usuario": {
+        "id_usuario": 3,
+        "nombre": "Lucía",
+        "apellido": "Ferreyra",
+        "rol": "tecnico"
+      },
+      "estado_fenologico": "Formación de roseta",
+      "severidad": 2,
+      "plagas": [
+        "Pulgón"
+      ],
+      "malezas": [
+        "Verdolaga"
+      ],
+      "notas": "Presencia puntual."
+    },
+    {
+      "id_observacion": 321,
+      "fecha": "2026-08-17",
+      "punto_codigo": "PM-01",
+      "usuario": {
+        "id_usuario": 2,
+        "nombre": "Martín",
+        "apellido": "Duarte",
+        "rol": "agronomo"
+      },
+      "estado_fenologico": "Desarrollo de hojas",
+      "severidad": 1,
+      "plagas": [],
+      "malezas": [],
+      "notas": "Trasplante bien establecido."
+    }
+  ]
+}

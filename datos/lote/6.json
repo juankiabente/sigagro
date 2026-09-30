@@ -1,0 +1,62 @@
+{
+  "lote": {
+    "id_lote": 6,
+    "nombre": "P-06 Lote Alto",
+    "sistema_cultivo": "suelo",
+    "superficie_ha": 0.65,
+    "puntos_muestreo_activos": 8
+  },
+  "campana": {
+    "id_campana": 106,
+    "cultivo": {
+      "id_cultivo": 6,
+      "nombre": "Cebollita",
+      "tipo": "hoja"
+    },
+    "cantidad_plantas": 20000,
+    "fecha_siembra": "2026-07-01",
+    "fecha_cosecha_estimada": "2026-10-05",
+    "fecha_cosecha_real": null,
+    "estado": "activa"
+  },
+  "observaciones": [
+    {
+      "id_observacion": 311,
+      "fecha": "2026-08-27",
+      "punto_codigo": "PM-06",
+      "usuario": {
+        "id_usuario": 3,
+        "nombre": "Lucía",
+        "apellido": "Ferreyra",
+        "rol": "tecnico"
+      },
+      "estado_fenologico": "Desarrollo de hojas",
+      "severidad": 2,
+      "plagas": [
+        "Trips de la cebolla"
+      ],
+      "malezas": [
+        "Verdolaga"
+      ],
+      "notas": "Baja presión de trips."
+    },
+    {
+      "id_observacion": 312,
+      "fecha": "2026-08-13",
+      "punto_codigo": "PM-02",
+      "usuario": {
+        "id_usuario": 2,
+        "nombre": "Martín",
+        "apellido": "Duarte",
+        "rol": "agronomo"
+      },
+      "estado_fenologico": "Desarrollo de hojas",
+      "severidad": 1,
+      "plagas": [],
+      "malezas": [
+        "Verdolaga"
+      ],
+      "notas": "Desmalezado mecánico pendiente."
+    }
+  ]
+}

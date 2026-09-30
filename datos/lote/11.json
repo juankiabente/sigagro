@@ -1,0 +1,58 @@
+{
+  "lote": {
+    "id_lote": 11,
+    "nombre": "P-11 Costa Sur",
+    "sistema_cultivo": "suelo",
+    "superficie_ha": 0.22,
+    "puntos_muestreo_activos": 6
+  },
+  "campana": {
+    "id_campana": 111,
+    "cultivo": {
+      "id_cultivo": 11,
+      "nombre": "Zapallito de tronco",
+      "tipo": "fruto"
+    },
+    "cantidad_plantas": 3000,
+    "fecha_siembra": "2026-07-28",
+    "fecha_cosecha_estimada": "2026-10-20",
+    "fecha_cosecha_real": null,
+    "estado": "activa"
+  },
+  "observaciones": [
+    {
+      "id_observacion": 324,
+      "fecha": "2026-08-20",
+      "punto_codigo": "PM-02",
+      "usuario": {
+        "id_usuario": 3,
+        "nombre": "Lucía",
+        "apellido": "Ferreyra",
+        "rol": "tecnico"
+      },
+      "estado_fenologico": "Desarrollo de hojas",
+      "severidad": 2,
+      "plagas": [
+        "Diabrotica (vaquita)"
+      ],
+      "malezas": [],
+      "notas": "Daño foliar leve."
+    },
+    {
+      "id_observacion": 325,
+      "fecha": "2026-08-06",
+      "punto_codigo": "PM-01",
+      "usuario": {
+        "id_usuario": 2,
+        "nombre": "Martín",
+        "apellido": "Duarte",
+        "rol": "agronomo"
+      },
+      "estado_fenologico": "Emergencia",
+      "severidad": 1,
+      "plagas": [],
+      "malezas": [],
+      "notas": "Emergencia uniforme."
+    }
+  ]
+}

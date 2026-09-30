@@ -1,0 +1,58 @@
+{
+  "lote": {
+    "id_lote": 2,
+    "nombre": "P-02 Invernadero Centro",
+    "sistema_cultivo": "invernadero",
+    "superficie_ha": 0.08,
+    "puntos_muestreo_activos": 4
+  },
+  "campana": {
+    "id_campana": 102,
+    "cultivo": {
+      "id_cultivo": 2,
+      "nombre": "Tomate redondo",
+      "tipo": "fruto"
+    },
+    "cantidad_plantas": 2000,
+    "fecha_siembra": "2026-07-20",
+    "fecha_cosecha_estimada": "2026-11-15",
+    "fecha_cosecha_real": null,
+    "estado": "activa"
+  },
+  "observaciones": [
+    {
+      "id_observacion": 303,
+      "fecha": "2026-08-26",
+      "punto_codigo": "PM-01",
+      "usuario": {
+        "id_usuario": 3,
+        "nombre": "Lucía",
+        "apellido": "Ferreyra",
+        "rol": "tecnico"
+      },
+      "estado_fenologico": "Floración",
+      "severidad": 1,
+      "plagas": [],
+      "malezas": [],
+      "notas": "Cuaje normal."
+    },
+    {
+      "id_observacion": 304,
+      "fecha": "2026-08-12",
+      "punto_codigo": "PM-03",
+      "usuario": {
+        "id_usuario": 2,
+        "nombre": "Martín",
+        "apellido": "Duarte",
+        "rol": "agronomo"
+      },
+      "estado_fenologico": "Desarrollo vegetativo",
+      "severidad": 2,
+      "plagas": [
+        "Mosca blanca"
+      ],
+      "malezas": [],
+      "notas": "Adultos aislados en el tercio superior."
+    }
+  ]
+}

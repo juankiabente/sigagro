@@ -1,0 +1,61 @@
+{
+  "lote": {
+    "id_lote": 10,
+    "nombre": "P-10 Cantera",
+    "sistema_cultivo": "suelo",
+    "superficie_ha": 0.28,
+    "puntos_muestreo_activos": 6
+  },
+  "campana": {
+    "id_campana": 110,
+    "cultivo": {
+      "id_cultivo": 10,
+      "nombre": "Jengibre",
+      "tipo": "raiz"
+    },
+    "cantidad_plantas": 4000,
+    "fecha_siembra": "2025-11-05",
+    "fecha_cosecha_estimada": "2026-11-15",
+    "fecha_cosecha_real": null,
+    "estado": "activa"
+  },
+  "observaciones": [
+    {
+      "id_observacion": 322,
+      "fecha": "2026-08-21",
+      "punto_codigo": "PM-02",
+      "usuario": {
+        "id_usuario": 2,
+        "nombre": "Martín",
+        "apellido": "Duarte",
+        "rol": "agronomo"
+      },
+      "estado_fenologico": "Desarrollo vegetativo",
+      "severidad": 3,
+      "plagas": [],
+      "malezas": [
+        "Gramilla",
+        "Capiquí"
+      ],
+      "notas": "Alta competencia de malezas. Programar desmalezado."
+    },
+    {
+      "id_observacion": 323,
+      "fecha": "2026-08-07",
+      "punto_codigo": "PM-01",
+      "usuario": {
+        "id_usuario": 3,
+        "nombre": "Lucía",
+        "apellido": "Ferreyra",
+        "rol": "tecnico"
+      },
+      "estado_fenologico": "Desarrollo vegetativo",
+      "severidad": 2,
+      "plagas": [],
+      "malezas": [
+        "Gramilla"
+      ],
+      "notas": "Enmalezamiento incipiente."
+    }
+  ]
+}

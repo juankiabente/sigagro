@@ -1,0 +1,62 @@
+{
+  "lote": {
+    "id_lote": 7,
+    "nombre": "P-07 Picada Larga",
+    "sistema_cultivo": "suelo",
+    "superficie_ha": 1.2,
+    "puntos_muestreo_activos": 10
+  },
+  "campana": {
+    "id_campana": 107,
+    "cultivo": {
+      "id_cultivo": 7,
+      "nombre": "Mandioca",
+      "tipo": "raiz"
+    },
+    "cantidad_plantas": 18000,
+    "fecha_siembra": "2025-10-20",
+    "fecha_cosecha_estimada": "2026-10-30",
+    "fecha_cosecha_real": null,
+    "estado": "activa"
+  },
+  "observaciones": [
+    {
+      "id_observacion": 313,
+      "fecha": "2026-08-22",
+      "punto_codigo": "PM-04",
+      "usuario": {
+        "id_usuario": 2,
+        "nombre": "Martín",
+        "apellido": "Duarte",
+        "rol": "agronomo"
+      },
+      "estado_fenologico": "Engrosamiento de raíces",
+      "severidad": 2,
+      "plagas": [
+        "Mosca blanca"
+      ],
+      "malezas": [
+        "Capiquí"
+      ],
+      "notas": "Sin daño económico."
+    },
+    {
+      "id_observacion": 314,
+      "fecha": "2026-07-25",
+      "punto_codigo": "PM-01",
+      "usuario": {
+        "id_usuario": 3,
+        "nombre": "Lucía",
+        "apellido": "Ferreyra",
+        "rol": "tecnico"
+      },
+      "estado_fenologico": "Engrosamiento de raíces",
+      "severidad": 1,
+      "plagas": [],
+      "malezas": [
+        "Capiquí"
+      ],
+      "notas": "Sin novedades."
+    }
+  ]
+}

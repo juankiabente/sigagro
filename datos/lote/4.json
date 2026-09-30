@@ -1,0 +1,58 @@
+{
+  "lote": {
+    "id_lote": 4,
+    "nombre": "P-04 Invernadero Fondo",
+    "sistema_cultivo": "invernadero",
+    "superficie_ha": 0.06,
+    "puntos_muestreo_activos": 4
+  },
+  "campana": {
+    "id_campana": 104,
+    "cultivo": {
+      "id_cultivo": 4,
+      "nombre": "Berenjena",
+      "tipo": "fruto"
+    },
+    "cantidad_plantas": 1000,
+    "fecha_siembra": "2026-07-18",
+    "fecha_cosecha_estimada": "2026-11-20",
+    "fecha_cosecha_real": null,
+    "estado": "activa"
+  },
+  "observaciones": [
+    {
+      "id_observacion": 307,
+      "fecha": "2026-08-24",
+      "punto_codigo": "PM-01",
+      "usuario": {
+        "id_usuario": 3,
+        "nombre": "Lucía",
+        "apellido": "Ferreyra",
+        "rol": "tecnico"
+      },
+      "estado_fenologico": "Floración",
+      "severidad": 1,
+      "plagas": [],
+      "malezas": [],
+      "notas": "Sin novedades."
+    },
+    {
+      "id_observacion": 308,
+      "fecha": "2026-08-10",
+      "punto_codigo": "PM-02",
+      "usuario": {
+        "id_usuario": 2,
+        "nombre": "Martín",
+        "apellido": "Duarte",
+        "rol": "agronomo"
+      },
+      "estado_fenologico": "Desarrollo vegetativo",
+      "severidad": 2,
+      "plagas": [
+        "Arañuela roja"
+      ],
+      "malezas": [],
+      "notas": "Colonias pequeñas en el envés, sin daño visible."
+    }
+  ]
+}
