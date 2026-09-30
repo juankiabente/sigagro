@@ -1,22 +1,5 @@
-/* ==========================================================================
-   SIGAgro — visor.js
-   Opción 8 · Visor de información técnica sobre el mapa.
-
-   - Al hacer clic en un lote del mapa se consulta su detalle con fetch.
-     Cada archivo datos/lote/{id}.json simula la respuesta de un futuro
-     endpoint GET /lote/{id}, con los nombres de columna del modelo AE2.
-   - Botones de alternancia entre la vista general (pública) y la vista
-     técnica, conectados con addEventListener.
-   - La vista técnica solo se habilita para los roles del modelo que la
-     necesitan: técnico, agrónomo y administrador.
-
-   Sin JavaScript, cada lote del mapa sigue siendo un enlace a su ficha:
-   el visor mejora la página, pero no es imprescindible para navegarla.
-   ========================================================================== */
-
 const URL_LOTE = (id) => "datos/lote/" + id + ".json";
 
-// Roles de la tabla usuario (AE2) habilitados para la vista técnica.
 const ROLES_TECNICOS = ["tecnico", "agronomo", "administrador"];
 
 const SISTEMAS = {
@@ -37,7 +20,9 @@ let vista = "general";       // "general" | "tecnica"
 
 // --- Nodos del DOM ----------------------------------------------------------
 
+const mapa = document.querySelector("#mapa");
 const panel = document.querySelector("#visor");
+const botonPanel = document.querySelector("#visorAbrir");
 const contenido = document.querySelector("#visorContenido");
 const selectorRol = document.querySelector("#visorRol");
 const botonesVista = document.querySelectorAll(".visor__vista");
@@ -103,6 +88,7 @@ async function obtenerLote(id) {
 async function seleccionarLote(id) {
   idSeleccionado = id;
   marcarSeleccion(id);
+  abrirPanel;
 
   panel.classList.add("visor--activo");
   contenido.innerHTML = '<p class="visor__estado">Cargando información del lote...</p>';
@@ -307,11 +293,32 @@ function aplicarRol() {
   dibujar();
 }
 
+function abrirPanel() {
+  panel.classList.add("visor--abierto");
+  mapa.classList.add("mapa--panel-abierto");
+  botonPanel.setAttribute("aria-expanded", "true");
+}
+
+function cerrarPanel() {
+  panel.classList.remove("visor--abierto");
+  mapa.classList.remove("mapa--panel-abierto");
+  botonPanel.setAttribute("aria-expanded", "false");
+}
+
+function alternarPanel() {
+  if (panel.classList.contains("visor--abierto")) {
+    cerrarPanel();
+  } else {
+    abrirPanel();
+  }
+}
+
 function cerrar() {
   idSeleccionado = null;
   loteActual = null;
   marcarSeleccion(null);
   panel.classList.remove("visor--activo");
+  cerrarPanel;
   contenido.innerHTML =
     '<p class="visor__estado">Seleccioná un lote en el mapa para ver su información.</p>';
 }
@@ -333,11 +340,21 @@ function conectarEventos() {
 
   // Botones de alternancia entre vistas.
   botonesVista.forEach(function (boton) {
-    boton.addEventListener("click", function () {
-      vista = boton.dataset.vista;
-      actualizarBotones();
-      dibujar();
-    });
+      botonPanel.addEventListener("click", alternarPanel);
+
+  // Al cerrar con la ×, el foco vuelve al ☰ para quien navega con teclado.
+  botonCerrar.addEventListener("click", function () {
+    cerrar();
+    botonPanel.focus();
+  });
+
+  // Esc cierra el panel sin perder la selección.
+  document.addEventListener("keydown", function (evento) {
+    if (evento.key === "Escape" && panel.classList.contains("visor--abierto")) {
+      cerrarPanel();
+      botonPanel.focus();
+    }
+  });
   });
 
   selectorRol.addEventListener("change", aplicarRol);

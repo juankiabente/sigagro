@@ -6,23 +6,58 @@
 
 /* --- Panel ---------------------------------------------------------------- */
 
+/* --- Panel lateral --------------------------------------------------------
+   Cerrado, queda fuera de la pantalla hacia la izquierda y oculto para el
+   teclado. Con la clase visor--abierto se desliza hacia adentro.            */
+
 .visor {
   position: absolute;
-  left: var(--sp-4);
-  bottom: var(--sp-7);
-  z-index: 400;
-  width: 360px;
-  max-height: calc(100% - 230px);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 450;
+  width: 380px;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   background-color: var(--blanco);
-  border-radius: var(--radio);
-  box-shadow: var(--sombra);
+  box-shadow: 2px 0 14px rgba(0, 0, 0, 0.28);
   font-size: var(--txt-sm);
+  transform: translateX(-100%);
+  visibility: hidden;
+  transition: transform 0.25s ease, visibility 0s linear 0.25s;
 }
 
-.visor--activo {
-  border-top: 3px solid var(--verde-medio);
+.visor--abierto {
+  transform: translateX(0);
+  visibility: visible;
+  transition: transform 0.25s ease, visibility 0s;
+}
+
+/* Con el panel abierto, los botones y la escala se corren a la derecha */
+.mapa__herramientas,
+.mapa__escala {
+  transition: left 0.25s ease;
+}
+
+.mapa--panel-abierto .mapa__herramientas,
+.mapa--panel-abierto .mapa__escala {
+  left: calc(380px + var(--sp-4));
+}
+
+/* El ☰ ahora es un botón: se ajusta y se marca cuando el panel está abierto */
+button.herramienta {
+  padding: 0;
+}
+
+.herramienta[aria-expanded="true"] {
+  color: var(--blanco);
+  background-color: var(--verde-oscuro);
+}
+
+.herramienta[aria-expanded="true"]:hover {
+  color: var(--blanco);
+  background-color: var(--verde-medio);
 }
 
 .visor__encabezado {
@@ -310,17 +345,28 @@
 
 /* --- Pantallas chicas ----------------------------------------------------- */
 
+/* --- Pantallas chicas: el panel ocupa todo el ancho ---------------------- */
+
 @media (max-width: 820px) {
   .visor {
-    left: var(--sp-2);
-    right: var(--sp-2);
-    bottom: var(--sp-2);
-    width: auto;
-    max-height: 55%;
+    width: 100%;
+  }
+
+  .mapa--panel-abierto .mapa__herramientas {
+    display: none;
   }
 
   .mapa__zoom,
   .mapa__escala {
     display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .visor,
+  .visor--abierto,
+  .mapa__herramientas,
+  .mapa__escala {
+    transition: none;
   }
 }
