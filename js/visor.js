@@ -88,7 +88,7 @@ async function obtenerLote(id) {
 async function seleccionarLote(id) {
   idSeleccionado = id;
   marcarSeleccion(id);
-  abrirPanel;
+  abrirPanel();
 
   panel.classList.add("visor--activo");
   contenido.innerHTML = '<p class="visor__estado">Cargando información del lote...</p>';
@@ -318,7 +318,7 @@ function cerrar() {
   loteActual = null;
   marcarSeleccion(null);
   panel.classList.remove("visor--activo");
-  cerrarPanel;
+  cerrarPanel();
   contenido.innerHTML =
     '<p class="visor__estado">Seleccioná un lote en el mapa para ver su información.</p>';
 }
@@ -340,7 +340,14 @@ function conectarEventos() {
 
   // Botones de alternancia entre vistas.
   botonesVista.forEach(function (boton) {
-      botonPanel.addEventListener("click", alternarPanel);
+    boton.addEventListener("click", function () {
+      vista = boton.dataset.vista;
+      actualizarBotones();
+      dibujar();
+    });
+  });
+
+  botonPanel.addEventListener("click", alternarPanel);
 
   // Al cerrar con la ×, el foco vuelve al ☰ para quien navega con teclado.
   botonCerrar.addEventListener("click", function () {
@@ -354,7 +361,6 @@ function conectarEventos() {
       cerrarPanel();
       botonPanel.focus();
     }
-  });
   });
 
   selectorRol.addEventListener("change", aplicarRol);
