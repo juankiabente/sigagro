@@ -1,0 +1,58 @@
+{
+  "lote": {
+    "id_lote": 12,
+    "nombre": "P-12 Loma Verde",
+    "sistema_cultivo": "suelo",
+    "superficie_ha": 0.16,
+    "puntos_muestreo_activos": 4
+  },
+  "campana": {
+    "id_campana": 112,
+    "cultivo": {
+      "id_cultivo": 12,
+      "nombre": "Repollo corazón de buey",
+      "tipo": "hoja"
+    },
+    "cantidad_plantas": 2000,
+    "fecha_siembra": "2026-07-10",
+    "fecha_cosecha_estimada": "2026-10-25",
+    "fecha_cosecha_real": null,
+    "estado": "activa"
+  },
+  "observaciones": [
+    {
+      "id_observacion": 326,
+      "fecha": "2026-08-19",
+      "punto_codigo": "PM-01",
+      "usuario": {
+        "id_usuario": 2,
+        "nombre": "Martín",
+        "apellido": "Duarte",
+        "rol": "agronomo"
+      },
+      "estado_fenologico": "Formación de cabeza",
+      "severidad": 2,
+      "plagas": [
+        "Polilla de las crucíferas"
+      ],
+      "malezas": [],
+      "notas": "Larvas aisladas, por debajo del umbral."
+    },
+    {
+      "id_observacion": 327,
+      "fecha": "2026-08-05",
+      "punto_codigo": "PM-03",
+      "usuario": {
+        "id_usuario": 3,
+        "nombre": "Lucía",
+        "apellido": "Ferreyra",
+        "rol": "tecnico"
+      },
+      "estado_fenologico": "Desarrollo de hojas",
+      "severidad": 1,
+      "plagas": [],
+      "malezas": [],
+      "notas": "Sin novedades."
+    }
+  ]
+}

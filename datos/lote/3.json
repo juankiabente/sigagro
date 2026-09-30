@@ -1,0 +1,60 @@
+{
+  "lote": {
+    "id_lote": 3,
+    "nombre": "P-03 Invernadero Sur",
+    "sistema_cultivo": "invernadero",
+    "superficie_ha": 0.05,
+    "puntos_muestreo_activos": 4
+  },
+  "campana": {
+    "id_campana": 103,
+    "cultivo": {
+      "id_cultivo": 3,
+      "nombre": "Tomate cherry",
+      "tipo": "fruto"
+    },
+    "cantidad_plantas": 1000,
+    "fecha_siembra": "2026-07-25",
+    "fecha_cosecha_estimada": "2026-11-05",
+    "fecha_cosecha_real": null,
+    "estado": "activa"
+  },
+  "observaciones": [
+    {
+      "id_observacion": 305,
+      "fecha": "2026-08-25",
+      "punto_codigo": "PM-02",
+      "usuario": {
+        "id_usuario": 2,
+        "nombre": "Martín",
+        "apellido": "Duarte",
+        "rol": "agronomo"
+      },
+      "estado_fenologico": "Fructificación",
+      "severidad": 3,
+      "plagas": [
+        "Polilla del tomate"
+      ],
+      "malezas": [],
+      "notas": "Galerías en hojas del tercio medio. Reforzar monitoreo con trampas de feromona."
+    },
+    {
+      "id_observacion": 306,
+      "fecha": "2026-08-11",
+      "punto_codigo": "PM-04",
+      "usuario": {
+        "id_usuario": 3,
+        "nombre": "Lucía",
+        "apellido": "Ferreyra",
+        "rol": "tecnico"
+      },
+      "estado_fenologico": "Floración",
+      "severidad": 2,
+      "plagas": [
+        "Polilla del tomate"
+      ],
+      "malezas": [],
+      "notas": "Primeras capturas en trampa."
+    }
+  ]
+}

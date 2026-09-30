@@ -1,0 +1,58 @@
+{
+  "lote": {
+    "id_lote": 1,
+    "nombre": "P-01 Invernadero Norte",
+    "sistema_cultivo": "invernadero",
+    "superficie_ha": 0.3,
+    "puntos_muestreo_activos": 6
+  },
+  "campana": {
+    "id_campana": 101,
+    "cultivo": {
+      "id_cultivo": 1,
+      "nombre": "Pimiento",
+      "tipo": "fruto"
+    },
+    "cantidad_plantas": 15000,
+    "fecha_siembra": "2026-07-15",
+    "fecha_cosecha_estimada": "2026-11-10",
+    "fecha_cosecha_real": null,
+    "estado": "activa"
+  },
+  "observaciones": [
+    {
+      "id_observacion": 301,
+      "fecha": "2026-08-26",
+      "punto_codigo": "PM-02",
+      "usuario": {
+        "id_usuario": 3,
+        "nombre": "Lucía",
+        "apellido": "Ferreyra",
+        "rol": "tecnico"
+      },
+      "estado_fenologico": "Floración",
+      "severidad": 2,
+      "plagas": [
+        "Trips"
+      ],
+      "malezas": [],
+      "notas": "Presencia baja de trips en flores, por debajo del umbral de acción."
+    },
+    {
+      "id_observacion": 302,
+      "fecha": "2026-08-12",
+      "punto_codigo": "PM-05",
+      "usuario": {
+        "id_usuario": 2,
+        "nombre": "Martín",
+        "apellido": "Duarte",
+        "rol": "agronomo"
+      },
+      "estado_fenologico": "Desarrollo vegetativo",
+      "severidad": 1,
+      "plagas": [],
+      "malezas": [],
+      "notas": "Sin novedades."
+    }
+  ]
+}

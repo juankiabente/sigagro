@@ -1,0 +1,326 @@
+/* ==========================================================================
+   SIGAgro — visor.css
+   Opción 8 · Visor de información técnica sobre el mapa.
+   Hoja separada de paginas.css para trabajar sin conflictos en Git.
+   ========================================================================== */
+
+/* --- Panel ---------------------------------------------------------------- */
+
+.visor {
+  position: absolute;
+  left: var(--sp-4);
+  bottom: var(--sp-7);
+  z-index: 400;
+  width: 360px;
+  max-height: calc(100% - 230px);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--blanco);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  font-size: var(--txt-sm);
+}
+
+.visor--activo {
+  border-top: 3px solid var(--verde-medio);
+}
+
+.visor__encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  padding: var(--sp-3) var(--sp-4);
+  border-bottom: var(--borde);
+}
+
+.visor__titulo {
+  font-size: var(--txt-md);
+}
+
+.visor__cerrar {
+  width: 26px;
+  height: 26px;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--gris-suave);
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
+
+.visor__cerrar:hover {
+  color: var(--verde-oscuro);
+  border-color: var(--gris-borde);
+}
+
+/* --- Controles: rol y vistas ---------------------------------------------- */
+
+.visor__controles {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  padding: var(--sp-3) var(--sp-4) 0;
+}
+
+.visor__control {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: var(--txt-xs);
+  font-weight: 600;
+  color: var(--gris-suave);
+}
+
+.visor__control select {
+  padding: 4px var(--sp-2);
+  font: inherit;
+  font-size: var(--txt-sm);
+  font-weight: 400;
+  color: var(--gris-texto);
+  border: 1px solid var(--gris-borde);
+  border-radius: 3px;
+}
+
+/* Botones de alternancia con aspecto de control segmentado */
+.visor__vistas {
+  display: flex;
+  border: 1px solid var(--gris-borde);
+  border-radius: var(--radio);
+  overflow: hidden;
+}
+
+.visor__vista {
+  padding: 5px var(--sp-3);
+  font-size: var(--txt-xs);
+  font-weight: 600;
+  color: var(--gris-suave);
+  background-color: var(--blanco);
+  border: none;
+}
+
+.visor__vista + .visor__vista {
+  border-left: 1px solid var(--gris-borde);
+}
+
+.visor__vista:hover:not(:disabled) {
+  background-color: var(--gris-fondo);
+}
+
+.visor__vista--activa {
+  color: var(--blanco);
+  background-color: var(--verde-oscuro);
+}
+
+.visor__vista--activa:hover:not(:disabled) {
+  background-color: var(--verde-oscuro);
+}
+
+.visor__vista:disabled {
+  color: var(--gris-borde);
+  cursor: not-allowed;
+}
+
+.visor__aviso-rol {
+  margin: var(--sp-2) var(--sp-4) 0;
+  font-size: var(--txt-xs);
+  color: var(--gris-suave);
+}
+
+.visor__aviso-rol[hidden] {
+  display: none;
+}
+
+/* --- Contenido ------------------------------------------------------------ */
+
+.visor__contenido {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: var(--sp-3) var(--sp-4) var(--sp-4);
+}
+
+.visor__estado {
+  padding: var(--sp-4);
+  text-align: center;
+  color: var(--gris-suave);
+  border: 1px dashed var(--gris-borde);
+  border-radius: var(--radio);
+}
+
+.visor__estado--error {
+  color: var(--alerta);
+  border-color: var(--alerta);
+}
+
+.visor__cabecera {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-2);
+}
+
+.visor__nombre {
+  font-size: var(--txt-md);
+}
+
+.visor__datos div {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  padding-block: 4px;
+  border-bottom: 1px dotted var(--gris-borde);
+}
+
+.visor__datos dt {
+  color: var(--gris-suave);
+}
+
+.visor__datos dd {
+  margin: 0;
+  font-weight: 600;
+  text-align: right;
+}
+
+/* La sección técnica se distingue con un fondo propio */
+.visor__datos--tecnicos {
+  margin-top: var(--sp-3);
+  padding: var(--sp-2) var(--sp-3);
+  background-color: #f4f7ef;
+  border-radius: var(--radio);
+}
+
+.visor__datos--tecnicos div:last-child {
+  border-bottom: none;
+}
+
+.visor__subtitulo {
+  margin: var(--sp-4) 0 var(--sp-2);
+  font-size: var(--txt-sm);
+}
+
+/* --- Historial de observaciones ------------------------------------------- */
+
+.visor__historial {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  list-style: none;
+}
+
+.visor__obs {
+  padding: var(--sp-3);
+  border: var(--borde);
+  border-radius: var(--radio);
+}
+
+.visor__obs-cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--sp-2);
+  font-weight: 600;
+}
+
+.visor__obs-meta,
+.visor__obs-notas {
+  font-size: var(--txt-xs);
+  color: var(--gris-suave);
+}
+
+.visor__obs-meta {
+  margin-bottom: var(--sp-2);
+}
+
+.visor__obs-notas {
+  margin-top: var(--sp-2);
+  color: var(--gris-texto);
+}
+
+.visor__obs-fila {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+  font-size: var(--txt-xs);
+}
+
+.visor__obs-fila > span:first-child {
+  width: 52px;
+  color: var(--gris-suave);
+}
+
+.visor__nada {
+  color: var(--gris-suave);
+}
+
+.etiqueta {
+  padding: 1px var(--sp-2);
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.etiqueta--plaga {
+  background-color: #fbe9e2;
+  color: #8a3210;
+}
+
+.etiqueta--maleza {
+  background-color: #eef3e4;
+  color: var(--verde-oscuro);
+}
+
+/* Escala de severidad 1 a 5, igual que el CHECK del modelo AE2 */
+.severidad {
+  padding: 1px var(--sp-2);
+  font-size: var(--txt-xs);
+  white-space: nowrap;
+  border-radius: 999px;
+  border: 1px solid;
+}
+
+.severidad--1 { background-color: #e9f3da; border-color: var(--verde-claro); color: var(--verde-oscuro); }
+.severidad--2 { background-color: #f1f5dd; border-color: #b9c96a; color: #5a6420; }
+.severidad--3 { background-color: #fbf1d9; border-color: var(--ambar); color: #7a5410; }
+.severidad--4 { background-color: #fae4da; border-color: var(--alerta); color: var(--alerta); }
+.severidad--5 { background-color: var(--alerta); border-color: var(--alerta); color: var(--blanco); }
+
+.visor__enlace {
+  display: inline-block;
+  margin-top: var(--sp-4);
+  font-weight: 600;
+  color: var(--verde-oscuro);
+}
+
+/* --- Lote seleccionado en el mapa ----------------------------------------- */
+
+.mapa__parcela--seleccionada rect,
+.mapa__parcela--seleccionada polygon {
+  stroke: #ffffff;
+  stroke-width: 5;
+}
+
+.capas__muestra--seleccion {
+  background-color: transparent;
+  border: 3px solid var(--gris-texto);
+}
+
+/* --- Pantallas chicas ----------------------------------------------------- */
+
+@media (max-width: 820px) {
+  .visor {
+    left: var(--sp-2);
+    right: var(--sp-2);
+    bottom: var(--sp-2);
+    width: auto;
+    max-height: 55%;
+  }
+
+  .mapa__zoom,
+  .mapa__escala {
+    display: none;
+  }
+}

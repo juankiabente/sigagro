@@ -1,0 +1,111 @@
+{
+  "lote": {
+    "id_lote": 8,
+    "nombre": "P-08 Frente Ruta",
+    "sistema_cultivo": "suelo",
+    "superficie_ha": 0.42,
+    "puntos_muestreo_activos": 12
+  },
+  "campana": {
+    "id_campana": 108,
+    "cultivo": {
+      "id_cultivo": 8,
+      "nombre": "Perejil",
+      "tipo": "hoja"
+    },
+    "cantidad_plantas": 10000,
+    "fecha_siembra": "2026-05-12",
+    "fecha_cosecha_estimada": "2026-10-20",
+    "fecha_cosecha_real": null,
+    "estado": "activa"
+  },
+  "observaciones": [
+    {
+      "id_observacion": 315,
+      "fecha": "2026-08-28",
+      "punto_codigo": "PM-04",
+      "usuario": {
+        "id_usuario": 2,
+        "nombre": "Martín",
+        "apellido": "Duarte",
+        "rol": "agronomo"
+      },
+      "estado_fenologico": "Desarrollo de hojas",
+      "severidad": 4,
+      "plagas": [
+        "Pulgón"
+      ],
+      "malezas": [],
+      "notas": "Colonias densas en brotes. Supera el umbral de acción: se recomienda intervenir."
+    },
+    {
+      "id_observacion": 316,
+      "fecha": "2026-08-28",
+      "punto_codigo": "PM-07",
+      "usuario": {
+        "id_usuario": 2,
+        "nombre": "Martín",
+        "apellido": "Duarte",
+        "rol": "agronomo"
+      },
+      "estado_fenologico": "Desarrollo de hojas",
+      "severidad": 4,
+      "plagas": [
+        "Pulgón"
+      ],
+      "malezas": [],
+      "notas": "Colonia en brote apical."
+    },
+    {
+      "id_observacion": 317,
+      "fecha": "2026-08-21",
+      "punto_codigo": "PM-07",
+      "usuario": {
+        "id_usuario": 3,
+        "nombre": "Lucía",
+        "apellido": "Ferreyra",
+        "rol": "tecnico"
+      },
+      "estado_fenologico": "Desarrollo de hojas",
+      "severidad": 3,
+      "plagas": [],
+      "malezas": [
+        "Pata de gallina",
+        "Gramilla"
+      ],
+      "notas": "Malezas en la entrefila."
+    },
+    {
+      "id_observacion": 318,
+      "fecha": "2026-08-14",
+      "punto_codigo": "PM-02",
+      "usuario": {
+        "id_usuario": 3,
+        "nombre": "Lucía",
+        "apellido": "Ferreyra",
+        "rol": "tecnico"
+      },
+      "estado_fenologico": "Desarrollo de hojas",
+      "severidad": 1,
+      "plagas": [],
+      "malezas": [],
+      "notas": "Recuento de plantas."
+    },
+    {
+      "id_observacion": 319,
+      "fecha": "2026-08-07",
+      "punto_codigo": "PM-09",
+      "usuario": {
+        "id_usuario": 2,
+        "nombre": "Martín",
+        "apellido": "Duarte",
+        "rol": "agronomo"
+      },
+      "estado_fenologico": "Desarrollo de hojas",
+      "severidad": 1,
+      "plagas": [],
+      "malezas": [],
+      "notas": "Control de brotación."
+    }
+  ]
+}
