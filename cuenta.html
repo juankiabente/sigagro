@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIGAgro — Mi cuenta</title>
+
+  <link rel="icon" href="img/logo.jpeg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/paginas.css">
+  <link rel="stylesheet" href="css/cuenta.css">
+</head>
+
+<body class="pagina">
+  <a class="saltar-contenido" href="#contenido">Ir al contenido</a>
+
+  <header class="barra">
+
+    <a class="barra__marca" href="index.html" aria-label="SIGAgro, inicio">
+      <img class="barra__isotipo" src="img/logo.jpeg" alt="SIGAgro">
+    </a>
+
+    <nav class="barra__menu" aria-label="Secciones del sistema">
+
+      <a class="barra__link" href="listado_tabla.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/>
+          <circle cx="12" cy="10" r="2.5"/>
+        </svg>
+        <span>Parcelas</span>
+      </a>
+
+      <a class="barra__link" href="index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/>
+          <path d="M9 3v15M15 6v15"/>
+        </svg>
+        <span>Mapa</span>
+      </a>
+
+      <a class="barra__link" href="comprar.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M14 2v6h6"/>
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <path d="M9 15h6M9 11h3"/>
+        </svg>
+        <span>Solicitar análisis</span>
+      </a>
+
+    </nav>
+
+    <div class="barra__menu barra__menu--derecha">
+      <a class="barra__link barra__link--activo" href="cuenta.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/>
+          <circle cx="12" cy="10" r="3.2"/>
+          <path d="M5.5 19a7 7 0 0 1 13 0"/>
+        </svg>
+        <!-- Este texto lo cambia cuenta.js: "Ingresar" o el nombre del usuario -->
+        <span id="barra-usuario">Ingresar</span>
+      </a>
+    </div>
+
+  </header>
+
+  <main class="contenido" id="contenido">
+    <div class="contenedor contenedor--angosto">
+
+      <!-- Mientras se consulta al servidor si hay sesión -->
+      <p id="vista-cargando" class="cuenta__cargando">Verificando sesión…</p>
+
+      <!-- ================= VISTA PÚBLICA (sin sesión) ================= -->
+      <section id="vista-publica" class="oculto">
+
+        <h1 class="pagina__titulo">Mi cuenta</h1>
+        <p class="pagina__bajada">Ingresá para ver tus solicitudes de análisis.</p>
+
+        <div class="pestanas" role="tablist">
+          <button type="button" id="tab-login" class="pestana pestana--activa"
+                  role="tab" aria-selected="true">Iniciar sesión</button>
+          <button type="button" id="tab-registro" class="pestana"
+                  role="tab" aria-selected="false">Crear cuenta</button>
+        </div>
+
+        <!-- Formulario de login -->
+        <section id="vista-login" class="panel">
+          <h2 class="panel__titulo">Ingreso al sistema</h2>
+          <div id="msg-login" class="mensaje" role="status"></div>
+
+          <form id="form-login">
+            <div class="campo">
+              <label for="login-email">Correo electrónico</label>
+              <input type="email" id="login-email" placeholder="nombre@ejemplo.com"
+                     autocomplete="email" required>
+            </div>
+            <div class="campo">
+              <label for="login-pass">Contraseña</label>
+              <input type="password" id="login-pass" autocomplete="current-password" required>
+            </div>
+            <button type="submit" class="boton boton--principal boton--ancho">Ingresar</button>
+          </form>
+        </section>
+
+        <!-- Formulario de registro -->
+        <section id="vista-registro" class="panel oculto">
+          <h2 class="panel__titulo">Crear cuenta</h2>
+          <div id="msg-registro" class="mensaje" role="status"></div>
+
+          <form id="form-registro">
+            <div class="campo">
+              <label for="reg-nombre">Nombre y apellido</label>
+              <input type="text" id="reg-nombre" placeholder="Ing. Agr. Nombre Apellido"
+                     autocomplete="name" required>
+            </div>
+            <div class="campo">
+              <label for="reg-email">Correo electrónico</label>
+              <input type="email" id="reg-email" placeholder="nombre@ejemplo.com"
+                     autocomplete="email" required>
+            </div>
+            <div class="campo">
+              <label for="reg-pass">Contraseña</label>
+              <input type="password" id="reg-pass" minlength="6"
+                     autocomplete="new-password" required>
+              <small class="campo__ayuda">Mínimo 6 caracteres.</small>
+            </div>
+            <button type="submit" class="boton boton--principal boton--ancho">Crear cuenta</button>
+          </form>
+        </section>
+      </section>
+
+      <!-- ================= VISTA PRIVADA (con sesión) ================= -->
+      <section id="vista-privada" class="oculto">
+
+        <div class="cuenta__encabezado">
+          <div>
+            <!-- El nombre se inserta con .textContent (nunca innerHTML) -->
+            <h1 class="pagina__titulo">Hola, <span id="user-nombre"></span></h1>
+            <p class="pagina__bajada">
+              <span id="user-email"></span> · <span id="user-rol" class="estado estado--1"></span>
+            </p>
+          </div>
+          <div class="cuenta__acciones">
+            <a class="boton boton--principal" href="comprar.html">Nueva solicitud</a>
+            <button type="button" id="btn-logout" class="boton boton--secundario">Cerrar sesión</button>
+          </div>
+        </div>
+
+        <section class="panel">
+          <h2 class="panel__titulo">Mis solicitudes de análisis</h2>
+
+          <p id="sin-solicitudes" class="sin-resultados oculto">
+            Todavía no enviaste ninguna solicitud de análisis.
+          </p>
+
+          <div id="tabla-solicitudes" class="grilla-scroll">
+            <table class="grilla">
+              <thead>
+                <tr>
+                  <th>N.º</th>
+                  <th>Fecha</th>
+                  <th>Parcela</th>
+                  <th>Análisis</th>
+                  <th class="grilla__numero">Muestras</th>
+                  <th class="grilla__numero">Total</th>
+                  <th>Estado</th>
+                </tr>
+              </thead>
+              <!-- Las filas las arma cuenta.js con createElement + textContent -->
+              <tbody id="filas-solicitudes"></tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="pie">
+    <div class="pie__interior">
+      <div>
+        <p class="pie__titulo">SIGAgro</p>
+        <p>Establecimiento Andrade · Colonia Alemana, Misiones</p>
+      </div>
+      <div>
+        <p class="pie__titulo">Grupo Nipintucu</p>
+        <p>Paradigmas y Lenguajes de Programación III</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/cuenta.js"></script>
+</body>
+</html>

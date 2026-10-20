@@ -1,0 +1,135 @@
+/* ==========================================================================
+   SIGAgro — cuenta.css
+   Estilos de la página Mi cuenta (login, registro y panel privado).
+   ========================================================================== */
+
+.oculto {
+  display: none !important;
+}
+
+.contenedor--angosto {
+  max-width: 880px;
+}
+
+/* Las vistas de login/registro quedan más angostas que el panel */
+#vista-publica {
+  max-width: 460px;
+  margin-inline: auto;
+}
+
+.cuenta__cargando {
+  color: var(--gris-suave);
+  text-align: center;
+  padding-block: var(--sp-7);
+}
+
+/* --- Pestañas ------------------------------------------------------------ */
+
+.pestanas {
+  display: flex;
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-4);
+}
+
+.pestana {
+  flex: 1;
+  padding: var(--sp-3);
+  font: inherit;
+  font-size: var(--txt-sm);
+  font-weight: 600;
+  color: var(--gris-suave);
+  background-color: var(--gris-fondo);
+  border: 1px solid var(--gris-borde);
+  border-radius: var(--radio);
+  cursor: pointer;
+}
+
+.pestana--activa {
+  color: var(--blanco);
+  background-color: var(--verde-oscuro);
+  border-color: var(--verde-oscuro);
+}
+
+.boton--ancho {
+  width: 100%;
+  margin-top: var(--sp-2);
+  cursor: pointer;
+}
+
+/* --- Mensajes de respuesta del servidor ---------------------------------- */
+
+.mensaje {
+  display: none;
+  margin-bottom: var(--sp-4);
+  padding: var(--sp-3);
+  border-radius: var(--radio);
+  border: 1px solid;
+  font-size: var(--txt-sm);
+  font-weight: 600;
+}
+
+.mensaje--error {
+  display: block;
+  background-color: #fae4da;
+  border-color: var(--alerta);
+  color: var(--alerta);
+}
+
+.mensaje--exito {
+  display: block;
+  background-color: #e9f3da;
+  border-color: var(--verde-claro);
+  color: var(--verde-oscuro);
+}
+
+.mensaje--info {
+  display: block;
+  background-color: var(--crema);
+  border-color: var(--gris-borde);
+  color: var(--gris-texto);
+}
+
+/* --- Panel privado -------------------------------------------------------- */
+
+.cuenta__encabezado {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-5);
+}
+
+.cuenta__acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+}
+
+.cuenta__acciones .boton {
+  cursor: pointer;
+}
+
+/* El título no debe desbordar con nombres largos */
+#user-nombre {
+  overflow-wrap: anywhere;
+}
+
+/* Montos y cantidades en una sola línea */
+#filas-solicitudes .grilla__numero {
+  white-space: nowrap;
+}
+
+/* Nombre largo en la barra: se corta con "…" */
+#barra-usuario {
+  max-width: 16ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .pagina__titulo {
+    font-size: var(--txt-xl);
+  }
+}
