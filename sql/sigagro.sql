@@ -1,5 +1,5 @@
 -- =====================================================================
---  SIGAgro — Base de datos (AE3: autenticación)
+--  SIGAgro — Base de datos (AA23: autenticación)
 --  Importar en phpMyAdmin: pestaña "Importar" → elegir este archivo.
 -- =====================================================================
 

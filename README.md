@@ -34,7 +34,7 @@ Maquetado en HTML5 y CSS3, sin frameworks ni librerías externas.
 **Demo:** https://juankiabente.github.io/sigagro/
 **Documentación:** [docs/AE1-analisis-y-diseno.pdf](docs/AE1-analisis-y-diseno.pdf)
 
-## AE3 — Autenticación segura (PHP + MySQL)
+## AA23 — Autenticación segura (PHP + MySQL)
 
 Se agregó login, registro y una sección privada: **Mi cuenta** (`cuenta.html`),
 donde cada usuario ve sus propias solicitudes de análisis.
